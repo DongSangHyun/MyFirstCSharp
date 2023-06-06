@@ -45,7 +45,7 @@
             // 
             // btnRun
             // 
-            this.btnRun.Location = new System.Drawing.Point(23, 166);
+            this.btnRun.Location = new System.Drawing.Point(26, 166);
             this.btnRun.Name = "btnRun";
             this.btnRun.Size = new System.Drawing.Size(373, 48);
             this.btnRun.TabIndex = 1;
@@ -55,7 +55,7 @@
             // 
             // txtMatrix
             // 
-            this.txtMatrix.Location = new System.Drawing.Point(23, 220);
+            this.txtMatrix.Location = new System.Drawing.Point(36, 231);
             this.txtMatrix.Multiline = true;
             this.txtMatrix.Name = "txtMatrix";
             this.txtMatrix.Size = new System.Drawing.Size(373, 218);
