@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A78414FC-AA86-47ED-B164-FF3647039B52}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MyFirstCSharp</RootNamespace>
+    <AssemblyName>MyFirstCSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Chap04_DataType_ConvTest[데이터타입 변환 TEST].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chap04_DataType_ConvTest[데이터타입 변환 TEST].Designer.cs">
+      <DependentUpon>Chap04_DataType_ConvTest[데이터타입 변환 TEST].cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chap01_Hello[메세지박스 문자 표현].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chap01_Hello[메세지박스 문자 표현].Designer.cs">
+      <DependentUpon>Chap01_Hello[메세지박스 문자 표현].cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chap02_DataType[데이터타입].cs" />
+    <Compile Include="Chap03_DataTypeConversion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chap03_DataTypeConversion.Designer.cs">
+      <DependentUpon>Chap03_DataTypeConversion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chap05_Operator[연산자].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chap05_Operator[연산자].Designer.cs">
+      <DependentUpon>Chap05_Operator[연산자].cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chap06_StringChange[문자 바꾸기].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chap06_StringChange[문자 바꾸기].Designer.cs">
+      <DependentUpon>Chap06_StringChange[문자 바꾸기].cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chap07_StringFind[문자 찾기 및 바꾸기].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chap07_StringFind[문자 찾기 및 바꾸기].Designer.cs">
+      <DependentUpon>Chap07_StringFind[문자 찾기 및 바꾸기].cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chap08_StringSplit[문자 나누기].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chap08_StringSplit[문자 나누기].Designer.cs">
+      <DependentUpon>Chap08_StringSplit[문자 나누기].cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chap09_StringManage_Test_Teacher[문자열 다루기 테스트].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chap09_StringManage_Test_Teacher[문자열 다루기 테스트].Designer.cs">
+      <DependentUpon>Chap09_StringManage_Test_Teacher[문자열 다루기 테스트].cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chap10_NullManage[NULL 다루기].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chap10_NullManage[NULL 다루기].Designer.cs">
+      <DependentUpon>Chap10_NullManage[NULL 다루기].cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chap11_BranchingStatment[분기문].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chap11_BranchingStatment[분기문].Designer.cs">
+      <DependentUpon>Chap11_BranchingStatment[분기문].cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chap12_IF_Test_T.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chap12_IF_Test_T.designer.cs">
+      <DependentUpon>Chap12_IF_Test_T.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chap13_Switch[Swtich 분기문].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chap13_Switch[Swtich 분기문].Designer.cs">
+      <DependentUpon>Chap13_Switch[Swtich 분기문].cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chap14_Switch_Test_T[분기문 Test].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chap14_Switch_Test_T[분기문 Test].Designer.cs">
+      <DependentUpon>Chap14_Switch_Test_T[분기문 Test].cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chap15_Array[배열].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chap15_Array[배열].Designer.cs">
+      <DependentUpon>Chap15_Array[배열].cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chap16_Loop_For[분기문 FOR].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chap16_Loop_For[분기문 FOR].Designer.cs">
+      <DependentUpon>Chap16_Loop_For[분기문 FOR].cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chap16_Loop_For_Test_T[반복문 Test].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chap16_Loop_For_Test_T[반복문 Test].Designer.cs">
+      <DependentUpon>Chap16_Loop_For_Test_T[반복문 Test].cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chap17_Array2[2차원 배열].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chap17_Array2[2차원 배열].Designer.cs">
+      <DependentUpon>Chap17_Array2[2차원 배열].cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chap17_MatrixTest_T[2차원배열test].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chap17_MatrixTest_T[2차원배열test].Designer.cs">
+      <DependentUpon>Chap17_MatrixTest_T[2차원배열test].cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chap18_While[반복문 While].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chap18_While[반복문 While].Designer.cs">
+      <DependentUpon>Chap18_While[반복문 While].cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chap19_Foreach[반복문 Foreach].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chap19_Foreach[반복문 Foreach].Designer.cs">
+      <DependentUpon>Chap19_Foreach[반복문 Foreach].cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chgap19_Foreach_Test_T[Foreach 예제].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chgap19_Foreach_Test_T[Foreach 예제].Designer.cs">
+      <DependentUpon>Chgap19_Foreach_Test_T[Foreach 예제].cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Chap04_DataType_ConvTest[데이터타입 변환 TEST].resx">
+      <DependentUpon>Chap04_DataType_ConvTest[데이터타입 변환 TEST].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chap01_Hello[메세지박스 문자 표현].resx">
+      <DependentUpon>Chap01_Hello[메세지박스 문자 표현].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chap03_DataTypeConversion.resx">
+      <DependentUpon>Chap03_DataTypeConversion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chap05_Operator[연산자].resx">
+      <DependentUpon>Chap05_Operator[연산자].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chap06_StringChange[문자 바꾸기].resx">
+      <DependentUpon>Chap06_StringChange[문자 바꾸기].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chap07_StringFind[문자 찾기 및 바꾸기].resx">
+      <DependentUpon>Chap07_StringFind[문자 찾기 및 바꾸기].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chap08_StringSplit[문자 나누기].resx">
+      <DependentUpon>Chap08_StringSplit[문자 나누기].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chap09_StringManage_Test_Teacher[문자열 다루기 테스트].resx">
+      <DependentUpon>Chap09_StringManage_Test_Teacher[문자열 다루기 테스트].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chap10_NullManage[NULL 다루기].resx">
+      <DependentUpon>Chap10_NullManage[NULL 다루기].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chap11_BranchingStatment[분기문].resx">
+      <DependentUpon>Chap11_BranchingStatment[분기문].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chap12_IF_Test_T.resx">
+      <DependentUpon>Chap12_IF_Test_T.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chap13_Switch[Swtich 분기문].resx">
+      <DependentUpon>Chap13_Switch[Swtich 분기문].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chap14_Switch_Test_T[분기문 Test].resx">
+      <DependentUpon>Chap14_Switch_Test_T[분기문 Test].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chap15_Array[배열].resx">
+      <DependentUpon>Chap15_Array[배열].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chap16_Loop_For[분기문 FOR].resx">
+      <DependentUpon>Chap16_Loop_For[분기문 FOR].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chap16_Loop_For_Test_T[반복문 Test].resx">
+      <DependentUpon>Chap16_Loop_For_Test_T[반복문 Test].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chap17_Array2[2차원 배열].resx">
+      <DependentUpon>Chap17_Array2[2차원 배열].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chap17_MatrixTest_T[2차원배열test].resx">
+      <DependentUpon>Chap17_MatrixTest_T[2차원배열test].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chap18_While[반복문 While].resx">
+      <DependentUpon>Chap18_While[반복문 While].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chap19_Foreach[반복문 Foreach].resx">
+      <DependentUpon>Chap19_Foreach[반복문 Foreach].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chgap19_Foreach_Test_T[Foreach 예제].resx">
+      <DependentUpon>Chgap19_Foreach_Test_T[Foreach 예제].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
