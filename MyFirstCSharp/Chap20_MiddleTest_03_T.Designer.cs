@@ -86,6 +86,7 @@
             this.btnResult.TabIndex = 5;
             this.btnResult.Text = "결과 보기";
             this.btnResult.UseVisualStyleBackColor = true;
+            this.btnResult.Click += new System.EventHandler(this.btnResult_Click);
             // 
             // label2
             // 
