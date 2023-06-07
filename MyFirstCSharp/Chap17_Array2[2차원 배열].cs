@@ -37,8 +37,7 @@ namespace MyFirstCSharp
             // 2. 배열의 생성 과 데이터 입력  0열 1열  2열  3열
             int[,] iValues2 = new int[3, 4] { {1,   2,  3,  4 },    // 0행
                                               {5,   6,  7,  8 },    // 1행
-                                              {9,  10, 11, 12 } };  // 2행 
-
+                                              {9,  10, 11, 12 } };  // 2행
 
             // 3. 2차원 배열의 행의 수 를 구하는 기능. 
             int iMatrixRowCount = iValues2.GetLength(0); // 2차원 배열의 행의 수 대입.

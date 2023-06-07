@@ -109,8 +109,9 @@ namespace MyFirstCSharp
                 // 만약에 MyControl 이 TextBox 유형이면.
                 if (MyControl is TextBox)
                 {
-                    TextBox text0001 = (TextBox)MyControl;
-                    text0001.Clear();
+                    MyControl.Text = "";
+                    //TextBox text0001 = (TextBox)MyControl;
+                    //text0001.Clear();
                 }
             }
         }

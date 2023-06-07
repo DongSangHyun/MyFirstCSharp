@@ -16,7 +16,7 @@ namespace MyFirstCSharp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Chgap19_Foreach_Test()); 
+            Application.Run(new Chap20_MiddleTest_01_T()); 
         }
     }
 }

@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace MyFirstCSharp
 {
-    public partial class Chgap19_Foreach_Test_T : Form
+    public partial class Chap20_MiddleTest_02_T : Form
     {
-        public Chgap19_Foreach_Test_T()
+        public Chap20_MiddleTest_02_T()
         {
             InitializeComponent();
-        }
-
-        private void btnRun_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

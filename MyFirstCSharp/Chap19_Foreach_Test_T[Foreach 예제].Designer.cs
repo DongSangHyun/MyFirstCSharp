@@ -55,7 +55,7 @@
             // 
             // txtMatrix
             // 
-            this.txtMatrix.Location = new System.Drawing.Point(36, 231);
+            this.txtMatrix.Location = new System.Drawing.Point(26, 230);
             this.txtMatrix.Multiline = true;
             this.txtMatrix.Name = "txtMatrix";
             this.txtMatrix.Size = new System.Drawing.Size(373, 218);
