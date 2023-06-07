@@ -40,11 +40,16 @@ namespace MyFirstCSharp
             int iResultIndex = 0; // 찾은 값이 등록 될 주소.
 
             // 로직 수행 여부 를 지정할 외부 변수 Bool
-            bool bBreakFlag = false;    
+            bool bBreakFlag = false;
+
+            // 반복의 횟수를 찾기 위한 Foreach Count
+            int iMvalueForeacCnt = 0; // 기준값 Foreach Count
+            int iSvalueForeacCnt = 0; // 찾을값 Foreach Count
 
             // 2차원 배열에서 기준 값을 뽑아올 foreach
-            foreach(int iValue in iValues)
+            foreach (int iValue in iValues)
             {
+                ++iMvalueForeacCnt;
                 // 로직 수행 여부 를 지정할 외부 변수 Bool
                 bBreakFlag = false;
                 // 메모화 기능을 이용한 벨리데이션.
@@ -70,6 +75,11 @@ namespace MyFirstCSharp
                 // iR_Value : 기준 값에서 20을 만들수 있는 대상 정수.
                 foreach (int iR_Value  in iValues)
                 {
+                    ++iSvalueForeacCnt;
+                    if (iMvalueForeacCnt == iSvalueForeacCnt)
+                    {
+                        break;
+                    }
                     // 찾아야 되는 수 ==  배열에서 하나씩 추출한 수
                     if (iFindValue == iR_Value)
                     {
@@ -79,6 +89,9 @@ namespace MyFirstCSharp
                         sValues += $"{iValue},{iR_Value}\r\n"; // 찾은 값의 쌍을 보여주기 위해 문자열에 등록.
                     }
                 }
+                // 찾을값 을 찾는 반복 횟수 0 으로 초기화
+                iSvalueForeacCnt = 0;
+
             }
             MessageBox.Show(sValues);
         }
