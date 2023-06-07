@@ -179,6 +179,12 @@
     <Compile Include="Chap19_Foreach_Test_T[Foreach 예제].Designer.cs">
       <DependentUpon>Chap19_Foreach_Test_T[Foreach 예제].cs</DependentUpon>
     </Compile>
+    <Compile Include="Chap20_MiddleTest_02_T.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chap20_MiddleTest_02_T.Designer.cs">
+      <DependentUpon>Chap20_MiddleTest_02_T.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Chap04_DataType_ConvTest[데이터타입 변환 TEST].resx">
@@ -246,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Chap19_Foreach_Test_T[Foreach 예제].resx">
       <DependentUpon>Chap19_Foreach_Test_T[Foreach 예제].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chap20_MiddleTest_02_T.resx">
+      <DependentUpon>Chap20_MiddleTest_02_T.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
