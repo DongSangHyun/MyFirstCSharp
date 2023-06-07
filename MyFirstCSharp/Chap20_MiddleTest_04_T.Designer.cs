@@ -62,6 +62,7 @@
             this.btnFIndResult.TabIndex = 2;
             this.btnFIndResult.Text = "중복 값 찾기";
             this.btnFIndResult.UseVisualStyleBackColor = true;
+            this.btnFIndResult.Click += new System.EventHandler(this.btnFIndResult_Click);
             // 
             // Chap20_MiddleTest_04_T
             // 
