@@ -132,14 +132,31 @@ namespace MyFirstCSharp
 
             // 그러면 ? 특정 조건을 만족 시킬때 (ex iValue > 100 ) 리스트의 요소를 삭제 하는 방법 ? 
             // i : 리스트의 index 를 가리키는 정수.
-            for (int i = 0; i < list_i.Count; i++ )
+
+            // 해결 1 : index 의 요소를 삭제 후 현재 index 를 다시 비교 할 수 있도록 i 를 1 차감.
+            //for (int i = 0; i < list_i.Count; i++ )
+            //{
+            //    if (list_i[i] > 100)
+            //    {
+            //        list_i.RemoveAt(i);
+            //        --i;
+            //    }
+            //}
+
+            // 해결 2 
+            // 역 For  문을 이용하여 마지막 index 로 부터 순차적으로 처리 하도록 하는 방법.
+            for (int i = list_i.Count - 1; i >= 0; i--)
             {
                 if (list_i[i] > 100)
                 {
                     list_i.RemoveAt(i);
-                    --i;
                 }
             }
+            // 마지막 index 로 부터 검색 해서 올라올 경우 (역 For)
+            // 현재 index 의 요소 가 삭제 되더라도 . 
+            // 현재 index 이후의 데이터 들만 재정렬 되므로
+            // 다음 처리해야 할 index ( 현재 index - 1) 의 데이터 는 
+            // 위치 변경이 없으므로 원활히 삭제 가 가능하다. 
         }
     }
 }
