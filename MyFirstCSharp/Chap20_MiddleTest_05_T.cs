@@ -55,6 +55,8 @@ namespace MyFirstCSharp
             // index 합이 누적되어 있다. 
 
             // 결과 의 누적 index 에 있는 곳으로부터 3자리 를 xxx 치환.
+            string sFindString = sTitle.Substring(iResultIndex, 3);
+            txtResult.Text = sTitle.Replace(sFindString, "XXX");
         }
     }
 }
