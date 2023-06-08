@@ -62,6 +62,7 @@
             this.btnResult.TabIndex = 2;
             this.btnResult.Text = "부족 금액 계산";
             this.btnResult.UseVisualStyleBackColor = true;
+            this.btnResult.Click += new System.EventHandler(this.btnResult_Click);
             // 
             // Chap20_MiddleTest_06_T
             // 
