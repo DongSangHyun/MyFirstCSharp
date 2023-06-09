@@ -221,17 +221,23 @@
     <Compile Include="Chap20_MiddleTest_08_T.Designer.cs">
       <DependentUpon>Chap20_MiddleTest_08_T.cs</DependentUpon>
     </Compile>
-    <Compile Include="Chap21_Collection.cs">
+    <Compile Include="Chap21_Collection[컬렉션].cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Chap21_Collection.Designer.cs">
-      <DependentUpon>Chap21_Collection.cs</DependentUpon>
+    <Compile Include="Chap21_Collection[컬렉션].Designer.cs">
+      <DependentUpon>Chap21_Collection[컬렉션].cs</DependentUpon>
     </Compile>
     <Compile Include="Chap21_Collection_Test_T.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Chap21_Collection_Test_T.Designer.cs">
       <DependentUpon>Chap21_Collection_Test_T.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chap22_Method.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chap22_Method.Designer.cs">
+      <DependentUpon>Chap22_Method.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -322,11 +328,14 @@
     <EmbeddedResource Include="Chap20_MiddleTest_08_T.resx">
       <DependentUpon>Chap20_MiddleTest_08_T.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Chap21_Collection.resx">
-      <DependentUpon>Chap21_Collection.cs</DependentUpon>
+    <EmbeddedResource Include="Chap21_Collection[컬렉션].resx">
+      <DependentUpon>Chap21_Collection[컬렉션].cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Chap21_Collection_Test_T.resx">
       <DependentUpon>Chap21_Collection_Test_T.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chap22_Method.resx">
+      <DependentUpon>Chap22_Method.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

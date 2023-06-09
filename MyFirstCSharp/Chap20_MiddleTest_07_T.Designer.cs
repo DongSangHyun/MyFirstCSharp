@@ -46,9 +46,9 @@
             // 
             // btnResult
             // 
-            this.btnResult.Location = new System.Drawing.Point(34, 186);
+            this.btnResult.Location = new System.Drawing.Point(34, 192);
             this.btnResult.Name = "btnResult";
-            this.btnResult.Size = new System.Drawing.Size(497, 41);
+            this.btnResult.Size = new System.Drawing.Size(497, 35);
             this.btnResult.TabIndex = 1;
             this.btnResult.Text = "없는 수 합하기";
             this.btnResult.UseVisualStyleBackColor = true;
