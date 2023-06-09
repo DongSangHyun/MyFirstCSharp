@@ -72,6 +72,7 @@
             this.btnLastIndexOf.TabIndex = 3;
             this.btnLastIndexOf.Text = "LastindexOf() 방식";
             this.btnLastIndexOf.UseVisualStyleBackColor = true;
+            this.btnLastIndexOf.Click += new System.EventHandler(this.btnLastIndexOf_Click);
             // 
             // btnDictionary
             // 
