@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -76,11 +77,31 @@ namespace MyFirstCSharp
             //   그대로 복사하여 서로 다른 데이터 형식으로 복사하는 방법. 
 
             object oValue = iExamArray.Clone();
-            int[] iBackUps = (int[])oValue;  
+            int[] iBackUps = (int[])oValue;
             //Object 형식 -> 특정데이터 형식 형변환 unBoxing
 
             //int[] iBackUps = (int[])iExamArray.Clone();
+            Item[] items = new Item[]
+            {
+                new Item(5,"A"),
+                new Item(4,"B"),
+                new Item(3,"C")
+            };
+             
+            Array.Sort(items);
         }
+        public class Item
+        { 
+            public int code;
+            public string name;
+
+            public Item(int code, string name)
+            {
+                this.code = code;
+                this.name = name;
+            }
+        }
+
 
         private void btnArrayCopy_Click(object sender, EventArgs e)
         {
