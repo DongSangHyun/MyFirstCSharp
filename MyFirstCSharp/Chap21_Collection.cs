@@ -406,7 +406,10 @@ namespace MyFirstCSharp
             //  2. HashTable 의 데이터 표현. 
             // (int) : 명시적 형변환 캐스팅 (강제 형변환)
             //         * 반드시 변형 되어야 하는 데이터 형이 정해져 있어(일치해)야 한다. 
-            int iValue = (int)HT[10]; // unboxing 을 통한 데이터 타입 일치. (오류) "십" -> 정수 
+            //int iValue = (int)HT[10]; // unboxing 을 통한 데이터 타입 일치. (오류) "십" -> 정수 
+            string sValue = (string)HT[10];
+
+            // a
         }
     }
 }
