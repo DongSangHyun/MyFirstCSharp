@@ -97,6 +97,8 @@ namespace MyFirstCSharp
 
         private void btnLastIndexOf_Click(object sender, EventArgs e)
         {
+
+            //
             // LastIndexOf 방식().
             
             string sTitle = lbltitle.Text;
