@@ -409,8 +409,62 @@ namespace MyFirstCSharp
             //int iValue = (int)HT[10]; // unboxing 을 통한 데이터 타입 일치. (오류) "십" -> 정수 
             string sValue = (string)HT[10];
 
-            // a
+            // 3. HashTable 에 데이터 등록 방법 (초기화)
+            // 3-1 Dictionary 초기자로 초기화 하는 방식. 
+            Hashtable HT2 = new Hashtable()
+            {   ["일"]  = 10, 
+                ["Two"] = 20, 
+                [2]     = "이",
+                [1.3]   = 1.3 
+            };
+            //int[] iValues = new int[] { 1, 2, 3, 4, 5 };
+
+
+            // 3-2 컬렉션의 초기자로 초기화 하는 방식.
+            Hashtable HT3 = new Hashtable(){{"하나", 1 },{"둘", 2 },{1.3, 1.2 }};
+            int[,] iValues = new int[3, 2] {{ 1, 2 },    { 2, 3 },  { 3, 4 } };
+
+
+            // 4. HashTable 의 복사
+            // 4.1 얕은 복사. 
+            Hashtable Ht4 = HT;
+
+            
+            // 4.2  깊은 복사. 
+            // Heap 에 등록된 값 을 그대로 복사하여 새로 생성된 주소를 새로운객체에 전달.
+            Hashtable HT5 = new Hashtable(HT);
+
+            // 5. 키와 값 추가. 
+            HT.Add("육", 102);
+
+            // 6. 키와 값 삭제 . 
+            HT.Remove("육");
+
+            // 7. 키의 존재 여부 .
+            bool bCheck;
+            bCheck = HT.ContainsKey("육"); // "육" 이라는 Key 가 존재 하는지 확인.
+
+            // 8. 값의 존재 여부.
+            bCheck = HT.ContainsValue(102); // 102 값이 있는지 확인.
+
+            // 9. 데이터의 삭제. 
+            HT.Clear();
         }
+
+
+        // 자료형 구조. Collection 
+        // 크게 두가지 유형으로 나뉜다. 
+        // 1. 주소값 index 로 데이터를 관리하는 유형. 
+        //    - int[] , List , ArrayList 
+        //  . 수정, 삭제 시 인덱스를 재 정렬하고 주소값을 전달해야 하는 과정이 일어나므로 
+        //    갱싱 속도가 떨어진다. 
+        //  . Index 주소 값을 곧바로 찾아 가므로 조회 에 대한 성능은 좋다. 
+
+        // 2. Key 정보를 바탕으로 주소 를 찾아가서 데이터를 관리하는 유형.
+        //   - Dictionary , HasTable 
+        //  . 지정한 키르르 통해 데이터를 등록 삭제 하므로 Heap 의 변경에 관계 없이 메모리 부하를 낮출수 있다.
+        //    수정, 삭제, 추가 의 효율이 높다. 
+        //  . 조회 의 성능은 떨어진다. ( Key 를 통하여 Heap 메모리 주소를 참조).
     }
 }
 ;
