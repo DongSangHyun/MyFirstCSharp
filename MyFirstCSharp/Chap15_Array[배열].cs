@@ -88,7 +88,10 @@ namespace MyFirstCSharp
                 new Item(3,"C")
             };
              
-            Array.Sort(items);
+            // code 를 대상으로 비교를 한다.
+            Array.Sort(items, (x, y) => x.code.CompareTo(y.code));
+            // 코드의 존재 여부를 확인한다. 
+            bool bResult = Array.Exists(items, x => x.code == 3);
         }
         public class Item
         { 
