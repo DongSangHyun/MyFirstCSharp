@@ -119,11 +119,11 @@
     <Compile Include="Chap13_Switch[Swtich 분기문].Designer.cs">
       <DependentUpon>Chap13_Switch[Swtich 분기문].cs</DependentUpon>
     </Compile>
-    <Compile Include="Chap22_Method02_Test.cs">
+    <Compile Include="Chap22_Method02_Test_T.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Chap22_Method02_Test.Designer.cs">
-      <DependentUpon>Chap22_Method02_Test.cs</DependentUpon>
+    <Compile Include="Chap22_Method02_Test_T.Designer.cs">
+      <DependentUpon>Chap22_Method02_Test_T.cs</DependentUpon>
     </Compile>
     <Compile Include="Chap14_Switch_Test_T[분기문 Test].cs">
       <SubType>Form</SubType>
@@ -289,8 +289,8 @@
     <EmbeddedResource Include="Chap13_Switch[Swtich 분기문].resx">
       <DependentUpon>Chap13_Switch[Swtich 분기문].cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Chap22_Method02_Test.resx">
-      <DependentUpon>Chap22_Method02_Test.cs</DependentUpon>
+    <EmbeddedResource Include="Chap22_Method02_Test_T.resx">
+      <DependentUpon>Chap22_Method02_Test_T.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Chap14_Switch_Test_T[분기문 Test].resx">
       <DependentUpon>Chap14_Switch_Test_T[분기문 Test].cs</DependentUpon>

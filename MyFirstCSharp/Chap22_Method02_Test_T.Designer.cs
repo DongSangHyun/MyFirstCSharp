@@ -1,6 +1,6 @@
 ﻿namespace MyFirstCSharp
 {
-    partial class Chap22_Method02_Test
+    partial class Chap22_Method02_Test_T
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Chap22_Method02_Test));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Chap22_Method02_Test_T));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnAppleOrder = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -74,6 +74,7 @@
             this.btnAppleOrder.Name = "btnAppleOrder";
             this.btnAppleOrder.Size = new System.Drawing.Size(221, 81);
             this.btnAppleOrder.TabIndex = 4;
+            this.btnAppleOrder.Tag = "사과";
             this.btnAppleOrder.Text = "사과 주문";
             this.btnAppleOrder.UseVisualStyleBackColor = true;
             this.btnAppleOrder.Click += new System.EventHandler(this.btnAppleOrder_Click);
@@ -134,9 +135,10 @@
             this.btnMelonOrder.Name = "btnMelonOrder";
             this.btnMelonOrder.Size = new System.Drawing.Size(221, 81);
             this.btnMelonOrder.TabIndex = 4;
+            this.btnMelonOrder.Tag = "참외";
             this.btnMelonOrder.Text = "참외 주문";
             this.btnMelonOrder.UseVisualStyleBackColor = true;
-            this.btnMelonOrder.Click += new System.EventHandler(this.btnMelonOrder_Click);
+            this.btnMelonOrder.Click += new System.EventHandler(this.btnAppleOrder_Click);
             // 
             // label4
             // 
@@ -194,9 +196,10 @@
             this.btnWMOrder.Name = "btnWMOrder";
             this.btnWMOrder.Size = new System.Drawing.Size(221, 81);
             this.btnWMOrder.TabIndex = 4;
+            this.btnWMOrder.Tag = "수박";
             this.btnWMOrder.Text = "수박 주문";
             this.btnWMOrder.UseVisualStyleBackColor = true;
-            this.btnWMOrder.Click += new System.EventHandler(this.btnWMOrder_Click);
+            this.btnWMOrder.Click += new System.EventHandler(this.btnAppleOrder_Click);
             // 
             // label5
             // 
@@ -253,7 +256,7 @@
             this.label8.TabIndex = 8;
             this.label8.Text = resources.GetString("label8.Text");
             // 
-            // Chap22_Method02_Test
+            // Chap22_Method02_Test_T
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -263,7 +266,7 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Chap22_Method02_Test";
+            this.Name = "Chap22_Method02_Test_T";
             this.Text = "Swtich 분기문 실습";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
