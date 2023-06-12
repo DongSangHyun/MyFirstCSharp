@@ -60,27 +60,27 @@
             // 
             // btnTwo_M
             // 
-            this.btnTwo_M.Location = new System.Drawing.Point(97, 307);
+            this.btnTwo_M.Location = new System.Drawing.Point(97, 273);
             this.btnTwo_M.Name = "btnTwo_M";
-            this.btnTwo_M.Size = new System.Drawing.Size(198, 36);
+            this.btnTwo_M.Size = new System.Drawing.Size(198, 70);
             this.btnTwo_M.TabIndex = 2;
             this.btnTwo_M.Text = "2의 배수 표현";
             this.btnTwo_M.UseVisualStyleBackColor = true;
             // 
             // btnFiv_M
             // 
-            this.btnFiv_M.Location = new System.Drawing.Point(312, 307);
+            this.btnFiv_M.Location = new System.Drawing.Point(301, 273);
             this.btnFiv_M.Name = "btnFiv_M";
-            this.btnFiv_M.Size = new System.Drawing.Size(198, 36);
+            this.btnFiv_M.Size = new System.Drawing.Size(198, 70);
             this.btnFiv_M.TabIndex = 3;
             this.btnFiv_M.Text = "5의 배수 표현";
             this.btnFiv_M.UseVisualStyleBackColor = true;
             // 
             // btnTen_M
             // 
-            this.btnTen_M.Location = new System.Drawing.Point(516, 307);
+            this.btnTen_M.Location = new System.Drawing.Point(505, 273);
             this.btnTen_M.Name = "btnTen_M";
-            this.btnTen_M.Size = new System.Drawing.Size(198, 36);
+            this.btnTen_M.Size = new System.Drawing.Size(198, 70);
             this.btnTen_M.TabIndex = 4;
             this.btnTen_M.Text = "10 의 배수 표현";
             this.btnTen_M.UseVisualStyleBackColor = true;
@@ -112,7 +112,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1088, 450);
+            this.ClientSize = new System.Drawing.Size(1083, 366);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtEnd);
             this.Controls.Add(this.txtStart);
