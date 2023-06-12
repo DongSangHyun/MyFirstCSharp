@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MyFirstCSharp
 {
-    public partial class Chap22_Method01_Test : Form
+    public partial class Chap22_Method01_Test_T : Form
     {
-        public Chap22_Method01_Test()
+        public Chap22_Method01_Test_T()
         {
             InitializeComponent();
         }
