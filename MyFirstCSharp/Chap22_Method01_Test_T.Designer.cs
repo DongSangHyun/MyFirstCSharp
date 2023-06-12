@@ -42,7 +42,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("맑은 고딕", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(39, 56);
+            this.label1.Location = new System.Drawing.Point(32, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1013, 144);
             this.label1.TabIndex = 0;
@@ -52,7 +52,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(80, 235);
+            this.label2.Location = new System.Drawing.Point(115, 196);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(128, 18);
             this.label2.TabIndex = 1;
@@ -60,41 +60,44 @@
             // 
             // btnTwo_M
             // 
-            this.btnTwo_M.Location = new System.Drawing.Point(97, 273);
+            this.btnTwo_M.Location = new System.Drawing.Point(132, 234);
             this.btnTwo_M.Name = "btnTwo_M";
             this.btnTwo_M.Size = new System.Drawing.Size(198, 70);
             this.btnTwo_M.TabIndex = 2;
             this.btnTwo_M.Text = "2의 배수 표현";
             this.btnTwo_M.UseVisualStyleBackColor = true;
+            this.btnTwo_M.Click += new System.EventHandler(this.btnTwo_M_Click);
             // 
             // btnFiv_M
             // 
-            this.btnFiv_M.Location = new System.Drawing.Point(301, 273);
+            this.btnFiv_M.Location = new System.Drawing.Point(336, 234);
             this.btnFiv_M.Name = "btnFiv_M";
             this.btnFiv_M.Size = new System.Drawing.Size(198, 70);
             this.btnFiv_M.TabIndex = 3;
             this.btnFiv_M.Text = "5의 배수 표현";
             this.btnFiv_M.UseVisualStyleBackColor = true;
+            this.btnFiv_M.Click += new System.EventHandler(this.btnFiv_M_Click);
             // 
             // btnTen_M
             // 
-            this.btnTen_M.Location = new System.Drawing.Point(505, 273);
+            this.btnTen_M.Location = new System.Drawing.Point(540, 234);
             this.btnTen_M.Name = "btnTen_M";
             this.btnTen_M.Size = new System.Drawing.Size(198, 70);
             this.btnTen_M.TabIndex = 4;
             this.btnTen_M.Text = "10 의 배수 표현";
             this.btnTen_M.UseVisualStyleBackColor = true;
+            this.btnTen_M.Click += new System.EventHandler(this.btnTen_M_Click);
             // 
             // txtStart
             // 
-            this.txtStart.Location = new System.Drawing.Point(214, 225);
+            this.txtStart.Location = new System.Drawing.Point(249, 186);
             this.txtStart.Name = "txtStart";
             this.txtStart.Size = new System.Drawing.Size(161, 28);
             this.txtStart.TabIndex = 5;
             // 
             // txtEnd
             // 
-            this.txtEnd.Location = new System.Drawing.Point(409, 225);
+            this.txtEnd.Location = new System.Drawing.Point(444, 186);
             this.txtEnd.Name = "txtEnd";
             this.txtEnd.Size = new System.Drawing.Size(161, 28);
             this.txtEnd.TabIndex = 6;
@@ -102,7 +105,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(381, 235);
+            this.label3.Location = new System.Drawing.Point(416, 196);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(22, 18);
             this.label3.TabIndex = 7;
@@ -112,7 +115,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1083, 366);
+            this.ClientSize = new System.Drawing.Size(1071, 367);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtEnd);
             this.Controls.Add(this.txtStart);
