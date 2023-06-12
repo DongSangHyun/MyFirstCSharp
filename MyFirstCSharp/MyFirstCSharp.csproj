@@ -251,6 +251,12 @@
     <Compile Include="Chap22_Method01_Test_T.Designer.cs">
       <DependentUpon>Chap22_Method01_Test_T.cs</DependentUpon>
     </Compile>
+    <Compile Include="Chap23_TryCatchFinally.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chap23_TryCatchFinally.Designer.cs">
+      <DependentUpon>Chap23_TryCatchFinally.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Chap04_DataType_ConvTest[데이터타입 변환 TEST].resx">
@@ -354,6 +360,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Chap22_Method01_Test_T.resx">
       <DependentUpon>Chap22_Method01_Test_T.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chap23_TryCatchFinally.resx">
+      <DependentUpon>Chap23_TryCatchFinally.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
