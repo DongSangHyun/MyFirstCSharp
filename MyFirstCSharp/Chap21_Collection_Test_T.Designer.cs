@@ -88,7 +88,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(809, 416);
             this.Controls.Add(this.btnDictionary);
             this.Controls.Add(this.btnLastIndexOf);
             this.Controls.Add(this.btnResult1);

@@ -64,7 +64,9 @@ namespace MyFirstCSharp
 
             ShowMessage2("안녕하세요"); // 인수 
             ShowMessage2("반갑습니다.");
-            ShowMessage2("불금되세요.");
+
+            string sMessage = "불금되세요";
+            ShowMessage2(sMessage);
         }
 
         void ShowMessage2(string message) // 인자. 
@@ -74,6 +76,47 @@ namespace MyFirstCSharp
             MessageBox.Show(message);
         }
 
+        #endregion
+
+        #region < 아무 값을 반환하지 않는 메서드 리턴 Void >
+        private void btnVoidReturn_Click(object sender, EventArgs e)
+        {
+            VoidReturnMethod("안녕하세요"); // 메서드를 호출.
+        }
+
+        void VoidReturnMethod(string smessage)
+        {
+            // Void [메서드 이름]
+            // Void : 아무런 값을 반환하지 않는 메서드.
+            //       . 아무런 값을 반환하지 않아도 된다는 약속을 한 메서드 이므로. 
+            //       . 메서드 내에 return; 구문이 없어도 된다.
+
+            MessageBox.Show(smessage);
+            txtTitle.Text = smessage;
+            return;  // 메서드를 호출한 곳으로 로직을 반환 
+                     // 메서드를 종료 하라는 의미 보다는 호출한 곳으로 돌아가라는 의미가 더 맞는표현
+                     
+            
+            // 바로 직전 로직에서 return ; 이 있으므로 실행되지 않는 구문.
+            lblTitle.Text = smessage;
+        }
+        #endregion
+
+        #region < string 값을 반환하는 리턴 메서드 >
+        private void btnStringReturn_Click(object sender, EventArgs e)
+        {
+            string sResult = StringReturnMethod("문자열을 전달합니다.");
+            MessageBox.Show(sResult); // 문자열을 반환합니다.
+        }
+        string StringReturnMethod(string sMessage)
+        {
+            // string 형식의 데이터를 호출한 곳으로 반환하기로 약속한 메서드. 
+            // return 구문으로 string 을 반환해 주지 않으면 오류가 발생.(컴파일)
+            
+            MessageBox.Show(sMessage); // 문자열을 전달합니다.
+            sMessage = "문자열을 반환합니다."; // 할당.
+            return sMessage;
+        }
         #endregion
     }
 }
