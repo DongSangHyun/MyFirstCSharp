@@ -233,11 +233,11 @@
     <Compile Include="Chap21_Collection_Test_T.Designer.cs">
       <DependentUpon>Chap21_Collection_Test_T.cs</DependentUpon>
     </Compile>
-    <Compile Include="Chap22_Method.cs">
+    <Compile Include="Chap22_Method01[메서드01].cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Chap22_Method.Designer.cs">
-      <DependentUpon>Chap22_Method.cs</DependentUpon>
+    <Compile Include="Chap22_Method01[메서드01].Designer.cs">
+      <DependentUpon>Chap22_Method01[메서드01].cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -334,8 +334,8 @@
     <EmbeddedResource Include="Chap21_Collection_Test_T.resx">
       <DependentUpon>Chap21_Collection_Test_T.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Chap22_Method.resx">
-      <DependentUpon>Chap22_Method.cs</DependentUpon>
+    <EmbeddedResource Include="Chap22_Method01[메서드01].resx">
+      <DependentUpon>Chap22_Method01[메서드01].cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

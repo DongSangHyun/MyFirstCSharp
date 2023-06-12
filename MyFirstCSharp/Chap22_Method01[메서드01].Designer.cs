@@ -37,9 +37,10 @@
             this.btnIntReturn = new System.Windows.Forms.Button();
             this.btnDefaultParameter = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnCatch1 = new System.Windows.Forms.Button();
             this.btnCatch2 = new System.Windows.Forms.Button();
+            this.btnCatch1 = new System.Windows.Forms.Button();
             this.btnArrayArgument = new System.Windows.Forms.Button();
+            this.btnArrayReturn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -130,6 +131,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "클래스를 인수 로 전달 하는 경우";
             // 
+            // btnCatch2
+            // 
+            this.btnCatch2.Location = new System.Drawing.Point(310, 37);
+            this.btnCatch2.Name = "btnCatch2";
+            this.btnCatch2.Size = new System.Drawing.Size(181, 57);
+            this.btnCatch2.TabIndex = 1;
+            this.btnCatch2.UseVisualStyleBackColor = true;
+            this.btnCatch2.Click += new System.EventHandler(this.btnCatch2_Click);
+            // 
             // btnCatch1
             // 
             this.btnCatch1.Location = new System.Drawing.Point(44, 37);
@@ -139,15 +149,6 @@
             this.btnCatch1.Text = "나잡아 봐라~";
             this.btnCatch1.UseVisualStyleBackColor = true;
             this.btnCatch1.Click += new System.EventHandler(this.btnCatch1_Click);
-            // 
-            // btnCatch2
-            // 
-            this.btnCatch2.Location = new System.Drawing.Point(310, 37);
-            this.btnCatch2.Name = "btnCatch2";
-            this.btnCatch2.Size = new System.Drawing.Size(181, 57);
-            this.btnCatch2.TabIndex = 1;
-            this.btnCatch2.UseVisualStyleBackColor = true;
-            this.btnCatch2.Click += new System.EventHandler(this.btnCatch2_Click);
             // 
             // btnArrayArgument
             // 
@@ -159,11 +160,22 @@
             this.btnArrayArgument.UseVisualStyleBackColor = true;
             this.btnArrayArgument.Click += new System.EventHandler(this.btnArrayArgument_Click);
             // 
+            // btnArrayReturn
+            // 
+            this.btnArrayReturn.Location = new System.Drawing.Point(216, 384);
+            this.btnArrayReturn.Name = "btnArrayReturn";
+            this.btnArrayReturn.Size = new System.Drawing.Size(189, 68);
+            this.btnArrayReturn.TabIndex = 10;
+            this.btnArrayReturn.Text = "ArrayReturn";
+            this.btnArrayReturn.UseVisualStyleBackColor = true;
+            this.btnArrayReturn.Click += new System.EventHandler(this.btnArrayReturn_Click);
+            // 
             // Chap22_Method
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(717, 584);
+            this.Controls.Add(this.btnArrayReturn);
             this.Controls.Add(this.btnArrayArgument);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnDefaultParameter);
@@ -196,5 +208,6 @@
         private System.Windows.Forms.Button btnCatch1;
         private System.Windows.Forms.Button btnCatch2;
         private System.Windows.Forms.Button btnArrayArgument;
+        private System.Windows.Forms.Button btnArrayReturn;
     }
 }

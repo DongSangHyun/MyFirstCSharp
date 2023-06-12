@@ -248,7 +248,7 @@ namespace MyFirstCSharp
 
         void ArrayChangeMethod(string[] _Svalues) // string[] _Svalues = sValues;
         {
-            // 배열을 인자로 받고 배열을 갱신 한 뒤 반한형은 없는 메서드.
+            // 배열을 인자로 받고 배열을 갱신 한 뒤 반환형은 없는 메서드.
             MessageBox.Show(_Svalues[0]); // 안녕하세요.
             _Svalues[0] = _Svalues[2];
             MessageBox.Show(_Svalues[0]); // C# 프로그래밍. 
@@ -259,6 +259,29 @@ namespace MyFirstCSharp
         {
             MessageBox.Show(sMessage);
             sMessage = "값을 지웠습니다.";
+        }
+        #endregion
+
+        #region < 배열을 리턴 하는 경우 >
+        private void btnArrayReturn_Click(object sender, EventArgs e)
+        {
+            // 배열을 반환하는 메서드 
+            // 1. 배열 인자 생성. 
+            int[] iValues = { 10, 20 };
+
+            // 2.메서드 호출.
+            iValues = ArrayReturnMethod(iValues);
+            MessageBox.Show($"[0] : {iValues[0]} , [1] : {iValues[1]}");
+        }
+
+        int[] ArrayReturnMethod(int[] _iValues)
+        {
+            // 배열 인수를 일정한 갑ㅅ과 합하는 메서드.
+            int[] iSumints = { 5, 10 };
+            iSumints[0] = iSumints[0] + _iValues[0];
+            iSumints[1] += _iValues[1];
+
+            return iSumints;
         }
         #endregion
     }
