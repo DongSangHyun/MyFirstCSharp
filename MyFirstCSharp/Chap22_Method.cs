@@ -105,17 +105,160 @@ namespace MyFirstCSharp
         #region < string 값을 반환하는 리턴 메서드 >
         private void btnStringReturn_Click(object sender, EventArgs e)
         {
+            // 반환 데이터 형식이 지정된 메서드 
+            //   . 1. 메서드를 호출한 곳에서 반환값을 전달받아 후속 로직을 구현할 수 있도록 해준다.
+            
             string sResult = StringReturnMethod("문자열을 전달합니다.");
             MessageBox.Show(sResult); // 문자열을 반환합니다.
+
+            // 2. 반환 데이터가 있는 메서드를 호출 할때 값을 전달 받지 않아도 무관.
+            StringReturnMethod("반환값을 받지 않는 메서드 호출");
+
         }
+
         string StringReturnMethod(string sMessage)
         {
             // string 형식의 데이터를 호출한 곳으로 반환하기로 약속한 메서드. 
-            // return 구문으로 string 을 반환해 주지 않으면 오류가 발생.(컴파일)
+            // 3. return 구문으로 string 을 반환해 주지 않으면 오류가 발생.(컴파일)
             
             MessageBox.Show(sMessage); // 문자열을 전달합니다.
             sMessage = "문자열을 반환합니다."; // 할당.
             return sMessage;
+        }
+        #endregion
+
+        #region < int 값을 반환하는 리턴 메서드 > 
+        private void btnIntReturn_Click(object sender, EventArgs e)
+        {
+            int iValue1 = 10;
+            int iValue2 = 20;
+
+            
+            MessageBox.Show(intSumReturnMethod(iValue1, iValue2).ToString());
+            // 위 로직은 아래와 같이 표현 할 수 있다. 
+            //int iResult = 0;
+            //iResult = intSumReturnMethod(iValue1, iValue2); // iValue1 과 iValue2 의 합 을 할당.
+            //MessageBox.Show(iResult.ToString());
+        }
+        
+        int intSumReturnMethod(int iV1, int iV2)
+        {
+            // 정수 2개 를 인자로 받아 합한 결과를 리턴 메서드
+            int iResult = iV1 + iV2; // iV1 과 iV2 인자에 어떠한 정수값이 오더라도 
+                                     // 합한 결과를 반환하는 공통 메서드.
+
+            // int 형을 반환하기로 약속한 메서드
+            return iResult;
+        }
+        #endregion
+
+        #region < 인자가 기본 값을 가지는 메서드 ( 선택적 인수 ) >
+        private void btnDefaultParameter_Click(object sender, EventArgs e)
+        {
+            // 메서드 에서 전달 받을 인자 의 유형에 상관없이 메서드를 호출 하고 싶을때. 
+
+
+            //1. 예를 들어 생성되어있는 메서드를 호출 한 로직이 여러번 구현되어있을때
+            
+            //2. 1번사용
+            DefaultParameter(10, 20);
+
+            //3. 다른로직에서 등록한 메서드 사용.
+            DefaultParameter(30, 40);
+
+            //4. 다른 로직에서 등록한 메서드를 사용.
+            DefaultParameter(60, 20);
+
+            //5. 어떤 이유로 인하여 값을 3개를 합해야 하는 상황이 발생.
+            //7. 기존의 메서드호출하는 구현부 에서 오류 가 발생.
+            //8. 선택적 인수 라는 개념을 적용 할 수 있다.
+
+            //10. 새로운 로직을 적용하여 기존의 메서드를 재사용 할수 있다. 
+            DefaultParameter(10, 20, 30); // 3번째 인수로 30 을 전달 할 경우 10 + 20 + 30 의 결과를 확인 할 수 있다.
+        }
+
+        // 선택적 인수 로 호출 할 수 있는 메서드를 생성.
+        //void DefaultParameter(int iValue, int iValue2, int iValue3)// 6. 필요에 의해 인자를 1개 더 추가. 
+        void DefaultParameter(int iValue, int iValue2 , int iValue3 = 10) // 9. 인자에 기본값을 설정 (선택적 인수 적용)
+        {
+            // 인자 값에 기본값을 설정 할 경우 
+            // 중간에 있는 인자에 만 기본값 설정 인자로 만들수 없다. 
+            // 마지막인자 들 에만 선택적 인수를 적용 할 수 있다. 
+            MessageBox.Show((iValue + iValue2 + iValue3).ToString()); // 전달 받은 인자를 합하여 표현.
+        }
+        #endregion
+
+        #region < 클래스를 인수로 전달 하는 메서드 > 
+        private void btnCatch1_Click(object sender, EventArgs e)
+        {
+            // 두개의 버튼 클래스의 Text 속성을 변경 하는 로직 이 반복적으로 나타날 경우
+            // 버튼 클래스를 인자로 받는 메서드를 생성 후 
+            // 인수로 던져주는 버튼 클래스 별로 가변적으로 처리 될 수 있도록 구현 할 수 있다.
+         
+            btnChtch(btnCatch1, btnCatch2);
+            //btnCatch1.Text = "";
+            //btnCatch2.Text = "나잡아 봐라~";
+        }
+        private void btnCatch2_Click(object sender, EventArgs e)
+        {
+            btnChtch(btnCatch2, btnCatch1);
+            //btnCatch2.Text = "";
+            //btnCatch1.Text = "나잡아 봐라~";
+        }
+        // 버튼을 클릭 하였을 경우 text 를 옮겨 다니는 기능을 할 메서드
+        void btnChtch(Button btn_Hide , Button btn_Show)
+        {
+            btn_Hide.Text = "";
+            btn_Show.Text = "나잡아 봐라~";
+        }
+
+        #endregion
+
+        #region < 인수를 배열로 전달하는 경우 ( 참조 주소값을 전달 ) > 
+        private void btnArrayArgument_Click(object sender, EventArgs e)
+        {
+            // 배열 을 인수로 전달 하는, 배열을 인자로 받는 메서드.
+
+            string[] sValues = { "안녕하세요", "반갑습니다.", "C#프로그래밍" };
+
+            // 배열을 전달 후 배열의 결과 확인.
+            ArrayArgMethod(sValues);
+            MessageBox.Show(sValues[0]); // 안녕하세요. 
+
+            // 배열을 전달 후 메서드 내에서 수정이 이루어 졌을 경우 
+            // 호출한 곳에 있는 전달 한 배열의 결과 확인.
+            ArrayChangeMethod(sValues);
+            MessageBox.Show(sValues[0]); // C# 프로그래밍 
+
+            // 값 형식의 데이터를 전달 하는 경우 
+            // Stack 에 있는 값 자체를 복사 하므로 
+            // 메서드 내에 값이 변경 되더라도 인수의 값은 변형 되지 않는다. 
+            string sMessage = "안녕하세요";
+            Setstring(sMessage); // Setstring 메서드 내에서 문자열을 변환하는 로직 . 
+            MessageBox.Show(sMessage); // 안녕하세요.
+        }
+
+        void ArrayArgMethod(string[] _sValues)
+        {
+            // 배열을 인자로 받은 반환형이 없는 메서드 
+            MessageBox.Show(_sValues[0]); // 안녕하세요
+            txtTitle.Text = _sValues[1];
+            lblTitle.Text = _sValues[2];
+        }
+
+        void ArrayChangeMethod(string[] _Svalues) // string[] _Svalues = sValues;
+        {
+            // 배열을 인자로 받고 배열을 갱신 한 뒤 반한형은 없는 메서드.
+            MessageBox.Show(_Svalues[0]); // 안녕하세요.
+            _Svalues[0] = _Svalues[2];
+            MessageBox.Show(_Svalues[0]); // C# 프로그래밍. 
+        }
+
+
+        void Setstring(string sMessage)
+        {
+            MessageBox.Show(sMessage);
+            sMessage = "값을 지웠습니다.";
         }
         #endregion
     }
