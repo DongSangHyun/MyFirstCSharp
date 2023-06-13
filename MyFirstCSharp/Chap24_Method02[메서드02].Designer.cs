@@ -32,6 +32,8 @@
             this.btnOut = new System.Windows.Forms.Button();
             this.btnin = new System.Windows.Forms.Button();
             this.btnTryParse = new System.Windows.Forms.Button();
+            this.btnOverLoding = new System.Windows.Forms.Button();
+            this.btnparams = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnRef
@@ -74,11 +76,33 @@
             this.btnTryParse.UseVisualStyleBackColor = true;
             this.btnTryParse.Click += new System.EventHandler(this.btnTryParse_Click);
             // 
+            // btnOverLoding
+            // 
+            this.btnOverLoding.Location = new System.Drawing.Point(12, 123);
+            this.btnOverLoding.Name = "btnOverLoding";
+            this.btnOverLoding.Size = new System.Drawing.Size(115, 89);
+            this.btnOverLoding.TabIndex = 4;
+            this.btnOverLoding.Text = "OverLoding";
+            this.btnOverLoding.UseVisualStyleBackColor = true;
+            this.btnOverLoding.Click += new System.EventHandler(this.btnOverLoding_Click);
+            // 
+            // btnparams
+            // 
+            this.btnparams.Location = new System.Drawing.Point(133, 123);
+            this.btnparams.Name = "btnparams";
+            this.btnparams.Size = new System.Drawing.Size(117, 89);
+            this.btnparams.TabIndex = 5;
+            this.btnparams.Text = "params";
+            this.btnparams.UseVisualStyleBackColor = true;
+            this.btnparams.Click += new System.EventHandler(this.btnparams_Click);
+            // 
             // Chap24_Method02
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(529, 317);
+            this.Controls.Add(this.btnparams);
+            this.Controls.Add(this.btnOverLoding);
             this.Controls.Add(this.btnTryParse);
             this.Controls.Add(this.btnin);
             this.Controls.Add(this.btnOut);
@@ -95,5 +119,7 @@
         private System.Windows.Forms.Button btnOut;
         private System.Windows.Forms.Button btnin;
         private System.Windows.Forms.Button btnTryParse;
+        private System.Windows.Forms.Button btnOverLoding;
+        private System.Windows.Forms.Button btnparams;
     }
 }

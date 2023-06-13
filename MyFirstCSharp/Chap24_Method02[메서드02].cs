@@ -122,11 +122,15 @@ namespace MyFirstCSharp
             // 결과 
             // bCheck = true 를 반환받는다. 
             // iResult = 200 정수가 할당되어 있을것.
+
+
+            // _int.TryParse() 호출. 
+            bCheck =  _int.TryParse("werf32", out iResult);
         }
 
         class _int
         {
-            static bool TryParse(string sTarget, out int iResult)
+            public static bool TryParse(string sTarget, out int iResult)
             { 
                 try
                 {
@@ -141,6 +145,100 @@ namespace MyFirstCSharp
             }
         }
 
+        #endregion
+
+
+        #region < Method Overloding > 
+        private void btnOverLoding_Click(object sender, EventArgs e)
+        {
+            // OverLoding
+            // 메서드 를 같은 이름으로 여러개 중복하여 만들수 있도록 하는 기능. 
+            // 예를들어 합산을 하는 메서드 기능이 있다고 가정을 할때
+            // 문자 를 인수로 던져 주는 경우,  숫자 를 인수 로 던져 주는 경우가 일을때
+            // 각각의 메서드를 다른이름으로 만들게 아니라 같은이름으로 인자의 종류 만 바꾸어 
+            // 구현 할 수 있다. 
+            // 메서드의 이름이 너무 많아 질 경우 사용해야하는 메서드를 정확히 찾을수 없을수도 있으므로
+            // 메서드의 이름을 통일 하여 구현 함으로서 개발의 편의성을 제공하는 기능.
+
+
+            // 1. 메서드를 만들어 두고 여러 로직에서 기능을 사용하고 있었을때.
+            DoSumInt(10, 20);
+            DoSumInt(100, 300);
+
+            // 2. 어떠한 경우에 의해서 숫자를 인수로 던져줄 경우가 아닌 문자를 인수로 던져 줄 경우가 발생.
+            //    새로운 메서드를 만들어 야한다.
+            DoSumString("10", "20");
+            DoSumString("100", "200");
+
+            // 3. 메서드가 다양해 질 경우 개발자가 원하는 메서드를 곧바로 찾기 힘든 경우도 발생하고. 
+            //    통일성 없는 메서드 이름으로 인해 프로그램이 표준화 되기 힘들다.
+
+            // 4. OverLoding 
+            //    메서드 의 이름은 똑같이 가되 , 인수와 인자에 따라 메서드를 다르게 구현 할 수 있게 하는 
+            //    편의 기능이 등장.
+            DoSum(10, 20);
+            DoSum("10", "20"); 
+
+            // * 인자의 유형과개수가  똑같은 메서드는 OverLoding 할 수 없다.
+        }
+
+        int DoSumInt(int _iValue1 , int _iValue2)
+        {
+            // 정수 인자 2개를 합하여 결과를 반환하는 메서드
+            return _iValue1 + _iValue2;
+        }
+        
+        int DoSumString(string siValue1, string siValue2)
+        {
+            return Convert.ToInt32(siValue1) + Convert.ToInt32(siValue2);
+        }
+
+        /******************* 메서드 오버 로딩 ***********************/
+        int DoSum(int iValue1, int ivalue2)
+        {
+            return iValue1 + ivalue2;
+        }
+        int DoSum(string siValue1, string siValue2)
+        {
+            return Convert.ToInt32(siValue1) + Convert.ToInt32(siValue2);
+        }
+
+        //인자의 유형과개수가  똑같은 메서드는 OverLoding 할 수 없다.
+        //int DoSum(int iValue1, int ivalue2)
+        //{
+        //    return iValue1 + ivalue2;
+        //}
+
+        // 반환 값이 다르더라 해도 OverLoding 할수 없다.
+        //string DoSum(int iValue1, int ivalue2)
+        //{
+        //    return iValue1 + ivalue2;
+        //}
+        #endregion
+
+        #region < params > 
+        private void btnparams_Click(object sender, EventArgs e)
+        {
+            // params 
+            // 같은 데이터 유형을 가변적으로 (개수를 가변적으로) 인자로 전달 받을수 있게 하는 키워드.
+            // 인자를 배열 형태로 받게 하여 인수를 가변적으로 던져줄수 있는 기능.
+
+            GetParameter(100, "안", "녕","하","세","요");
+
+        }
+
+        void GetParameter(int iValue, params string[] sValues)
+        {
+            // params string[] sValues
+            // 인수 의 개수에 관계 없이 sValues 라는 배열에 가변적으로 인수를 담는 인자.
+
+            StringBuilder sValue = new StringBuilder();
+            foreach(string s in sValues)
+            {
+                sValue.Append(s); // "안녕하세요"
+            }
+            MessageBox.Show(sValue.ToString());
+        }
         #endregion
     }
 }
