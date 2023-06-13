@@ -32,7 +32,8 @@
             this.txtInput = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnList = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnOutValue = new System.Windows.Forms.Button();
+            this.btnRecursive = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -52,6 +53,7 @@
             this.txtInput.Name = "txtInput";
             this.txtInput.Size = new System.Drawing.Size(126, 28);
             this.txtInput.TabIndex = 1;
+            this.txtInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label2
             // 
@@ -72,21 +74,33 @@
             this.btnList.UseVisualStyleBackColor = true;
             this.btnList.Click += new System.EventHandler(this.btnList_Click);
             // 
-            // button1
+            // btnOutValue
             // 
-            this.button1.Location = new System.Drawing.Point(498, 226);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(297, 43);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "외부 변수를 이용하여 확인하기";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnOutValue.Location = new System.Drawing.Point(498, 226);
+            this.btnOutValue.Name = "btnOutValue";
+            this.btnOutValue.Size = new System.Drawing.Size(297, 43);
+            this.btnOutValue.TabIndex = 4;
+            this.btnOutValue.Text = "외부 변수를 이용하여 확인하기";
+            this.btnOutValue.UseVisualStyleBackColor = true;
+            this.btnOutValue.Click += new System.EventHandler(this.btnOutValue_Click);
+            // 
+            // btnRecursive
+            // 
+            this.btnRecursive.Location = new System.Drawing.Point(498, 275);
+            this.btnRecursive.Name = "btnRecursive";
+            this.btnRecursive.Size = new System.Drawing.Size(293, 37);
+            this.btnRecursive.TabIndex = 5;
+            this.btnRecursive.Text = "재귀 함수 를 통하여 구하기";
+            this.btnRecursive.UseVisualStyleBackColor = true;
+            this.btnRecursive.Click += new System.EventHandler(this.btnRecursive_Click);
             // 
             // Chap25_RecursiveFunction_T
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(970, 399);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(974, 434);
+            this.Controls.Add(this.btnRecursive);
+            this.Controls.Add(this.btnOutValue);
             this.Controls.Add(this.btnList);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtInput);
@@ -104,6 +118,7 @@
         private System.Windows.Forms.TextBox txtInput;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnList;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnOutValue;
+        private System.Windows.Forms.Button btnRecursive;
     }
 }
