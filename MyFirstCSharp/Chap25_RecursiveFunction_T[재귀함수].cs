@@ -117,6 +117,7 @@ namespace MyFirstCSharp
         // 재귀 메서드 
         int GetFibonacciNum(int _iTurn)
         {
+            ++iLoopCount; // 반복 횟수 1 증가.
             int iResult = 0; // 최 하단의 값을 찾았을떄 누적되는 값. 
 
             if (_iTurn >= 1 && _iTurn <= 2) // 첫번째 순번. ( 기초값 0)
@@ -126,7 +127,7 @@ namespace MyFirstCSharp
                 // 이곳이 호출 되는 횟수 가 재귀 함수의 총 반복 횟수가 된다.
                 iResult = _iTurn  - 1; // 1번째 기초값 0 
                                        // 2번째 기초값 1
-                ++iLoopCount; // 반복 횟수 1 증가.
+                
             }
             else if (_iTurn > 2)
             {
@@ -139,5 +140,52 @@ namespace MyFirstCSharp
             return iResult;
         }
 
+        private void btnMemoization_Click(object sender, EventArgs e)
+        {
+            //메모이 제이션
+            // 컴퓨터 프로그램이 동일한 연산을 반복 해야 할때.
+            // 이전에 계산했던 결과 를 메모리에 등록 해 두고, 동일한 계산을 위해 수행해야
+            // 하는 반복 횟수를 제거하여 
+            // 프로그램의 실행 속도를 향상 시키는 방법. 
+            // 재귀 함수를 호출 하 는 횟수를 줄일수 있도록 등록되어있는 값을 
+            // 추가하여 재귀함수 호출 수를 줄이는 방법.
+
+            iLoopCount = 0; // 반복 횟수 0 
+
+
+            // 입력한 순차. iTurn
+            bool bCheck = int.TryParse(txtInput.Text, out int iTurn); // out int iResutl iResult 를 생성 하면서 out  값을 할당 받기.
+            if (!bCheck) return;
+
+
+            // 이전 연산의 결과 를 등록할 (메모화 할) Dictonary 생성.
+            Dictionary<int, int> dic = new Dictionary<int, int>()
+            {
+                //  Key 의 내용 : 회차, 순번.
+                //  Value 의 내용 : 수열의 결과 값
+                [1] = 0,
+                [2] = 1
+            };
+
+            int iResult = GetFibonacciNum(iTurn, dic) ; // 재귀 함수 의 결과 값을 담을 변수.
+            MessageBox.Show($"피보나치 수열 {iTurn} 번쨰의 값은 {iResult} 입니다. 총 반복 횟수 : {iLoopCount}");
+        }
+        
+        int GetFibonacciNum(int _iTurn, Dictionary<int,int> _Dic)
+        {
+            ++iLoopCount;
+            if (_Dic.ContainsKey(_iTurn))
+            {   
+                return _Dic[ _iTurn ];
+            }
+            
+            // dic 에 해당 순번의 Key 가 없을경우 ( 기존에 해당 순번에 대해서 찾은 값이 없을 경우 )
+            // 재귀 함수를 통하여 값이 도출 될때 까지 loop 반복.
+            if (_iTurn > 2)
+            {
+                _Dic[_iTurn] = GetFibonacciNum((_iTurn - 2), _Dic) + GetFibonacciNum((_iTurn - 1), _Dic);
+            } 
+            return _Dic[_iTurn];
+        }
     }
 }

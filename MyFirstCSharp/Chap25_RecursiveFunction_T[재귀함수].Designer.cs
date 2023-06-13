@@ -34,6 +34,7 @@
             this.btnList = new System.Windows.Forms.Button();
             this.btnOutValue = new System.Windows.Forms.Button();
             this.btnRecursive = new System.Windows.Forms.Button();
+            this.btnMemoization = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -68,7 +69,7 @@
             // 
             this.btnList.Location = new System.Drawing.Point(498, 177);
             this.btnList.Name = "btnList";
-            this.btnList.Size = new System.Drawing.Size(297, 43);
+            this.btnList.Size = new System.Drawing.Size(329, 43);
             this.btnList.TabIndex = 3;
             this.btnList.Text = "List 를 사용하여 확인하기";
             this.btnList.UseVisualStyleBackColor = true;
@@ -78,7 +79,7 @@
             // 
             this.btnOutValue.Location = new System.Drawing.Point(498, 226);
             this.btnOutValue.Name = "btnOutValue";
-            this.btnOutValue.Size = new System.Drawing.Size(297, 43);
+            this.btnOutValue.Size = new System.Drawing.Size(329, 43);
             this.btnOutValue.TabIndex = 4;
             this.btnOutValue.Text = "외부 변수를 이용하여 확인하기";
             this.btnOutValue.UseVisualStyleBackColor = true;
@@ -88,17 +89,28 @@
             // 
             this.btnRecursive.Location = new System.Drawing.Point(498, 275);
             this.btnRecursive.Name = "btnRecursive";
-            this.btnRecursive.Size = new System.Drawing.Size(293, 37);
+            this.btnRecursive.Size = new System.Drawing.Size(329, 37);
             this.btnRecursive.TabIndex = 5;
             this.btnRecursive.Text = "재귀 함수 를 통하여 구하기";
             this.btnRecursive.UseVisualStyleBackColor = true;
             this.btnRecursive.Click += new System.EventHandler(this.btnRecursive_Click);
+            // 
+            // btnMemoization
+            // 
+            this.btnMemoization.Location = new System.Drawing.Point(498, 318);
+            this.btnMemoization.Name = "btnMemoization";
+            this.btnMemoization.Size = new System.Drawing.Size(329, 37);
+            this.btnMemoization.TabIndex = 6;
+            this.btnMemoization.Text = "메모화 기법을 통한 재귀호출 보완하기";
+            this.btnMemoization.UseVisualStyleBackColor = true;
+            this.btnMemoization.Click += new System.EventHandler(this.btnMemoization_Click);
             // 
             // Chap25_RecursiveFunction_T
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(974, 434);
+            this.Controls.Add(this.btnMemoization);
             this.Controls.Add(this.btnRecursive);
             this.Controls.Add(this.btnOutValue);
             this.Controls.Add(this.btnList);
@@ -120,5 +132,6 @@
         private System.Windows.Forms.Button btnList;
         private System.Windows.Forms.Button btnOutValue;
         private System.Windows.Forms.Button btnRecursive;
+        private System.Windows.Forms.Button btnMemoization;
     }
 }
