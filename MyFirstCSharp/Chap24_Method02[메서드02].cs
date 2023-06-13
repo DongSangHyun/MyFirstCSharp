@@ -222,13 +222,14 @@ namespace MyFirstCSharp
             // params 
             // 같은 데이터 유형을 가변적으로 (개수를 가변적으로) 인자로 전달 받을수 있게 하는 키워드.
             // 인자를 배열 형태로 받게 하여 인수를 가변적으로 던져줄수 있는 기능.
+            // params 인자 배열은 인자 의 가장 마지막 위치에 설정 되어야 한다.
 
             GetParameter(100, "안", "녕","하","세","요");
             GetParameter(20,  "안", "녕");
             GetParameter(20, "안", "녕", "안", "녕", "안", "녕");
         }
 
-        void GetParameter(int iValue, params string[] sValues)
+        void GetParameter(int iValue, params  string[] sValues)
         {
             // params string[] sValues
             // 인수 의 개수에 관계 없이 sValues 라는 배열에 가변적으로 인수를 담는 인자.
@@ -239,6 +240,27 @@ namespace MyFirstCSharp
                 sValue.Append(s); // "안녕하세요"
             }
             MessageBox.Show(sValue.ToString());
+        }
+        #endregion
+
+
+        #region <  일반화 메서드 Generic Method > 
+        private void btnGenericMethod_Click(object sender, EventArgs e)
+        {
+            // 같은 기능을 하는 메서드가 인자의 데이터 타입만 바뀌는 경우. 
+            // 인자의 데이터 타입이 같은 메서드를 데이터 타입에 따라 오버로딩 할 시에는 
+            // 메서드 일반화를 통하여 여러 데이터 타입의 인자를 처리 하는 메서드 하나만 만들어서
+            // 관리 할 수 있다.
+
+            GenericMethod<int,string>(10, 20,"HI","Helow");
+            GenericMethod<string,bool>("안녕", "반가워",true, false);
+        }
+
+        void GenericMethod<T,K>(T tValue1, T tValue2, K kValue1, K value2)
+        {
+            // GenericMethod 를 호출 하기 위해서는 데이터 타입을 설정 해야 하며. 
+            // 설정한 데이터 타입은 T 라는 이름으로 사용 하겠다. 
+            MessageBox.Show(Convert.ToString(tValue1) + Convert.ToString(tValue2));
         }
         #endregion
     }

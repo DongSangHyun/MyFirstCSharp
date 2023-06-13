@@ -34,6 +34,7 @@
             this.btnTryParse = new System.Windows.Forms.Button();
             this.btnOverLoding = new System.Windows.Forms.Button();
             this.btnparams = new System.Windows.Forms.Button();
+            this.btnGenericMethod = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnRef
@@ -96,11 +97,22 @@
             this.btnparams.UseVisualStyleBackColor = true;
             this.btnparams.Click += new System.EventHandler(this.btnparams_Click);
             // 
+            // btnGenericMethod
+            // 
+            this.btnGenericMethod.Location = new System.Drawing.Point(256, 123);
+            this.btnGenericMethod.Name = "btnGenericMethod";
+            this.btnGenericMethod.Size = new System.Drawing.Size(108, 89);
+            this.btnGenericMethod.TabIndex = 6;
+            this.btnGenericMethod.Text = "Generic Method";
+            this.btnGenericMethod.UseVisualStyleBackColor = true;
+            this.btnGenericMethod.Click += new System.EventHandler(this.btnGenericMethod_Click);
+            // 
             // Chap24_Method02
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(529, 317);
+            this.ClientSize = new System.Drawing.Size(516, 263);
+            this.Controls.Add(this.btnGenericMethod);
             this.Controls.Add(this.btnparams);
             this.Controls.Add(this.btnOverLoding);
             this.Controls.Add(this.btnTryParse);
@@ -121,5 +133,6 @@
         private System.Windows.Forms.Button btnTryParse;
         private System.Windows.Forms.Button btnOverLoding;
         private System.Windows.Forms.Button btnparams;
+        private System.Windows.Forms.Button btnGenericMethod;
     }
 }
