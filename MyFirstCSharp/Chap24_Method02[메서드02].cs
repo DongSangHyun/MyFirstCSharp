@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Design;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -93,12 +94,15 @@ namespace MyFirstCSharp
             // 메서드 내에서 수정, 변경 할 수 없다. 
 
             int iValue = 10;
-            InMethod("문자열열열", in iValue);
+            string sm1 = "문자열열열";
+            InMethod(sm1, in iValue);
         }
         
         void InMethod(string sMessage, in int _iValue)
         {
+            MessageBox.Show(sMessage);
             sMessage = "값이 바뀝니다.";
+           
             //_iValue = 100; // 값이 바뀌지 않는다.
             // in 같은 경우는 메서드 에 전달 해 주는 인수 를 변형 하지 않기 위해 사용하는듯 하나. 
             // 메서드 내의 로직을 구현할때 . 변형 되면 안되는 로직으로 구현해야 하는게 맞으므로. 
