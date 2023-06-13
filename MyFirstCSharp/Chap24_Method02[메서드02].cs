@@ -34,7 +34,7 @@ namespace MyFirstCSharp
             int iValue2 = 20;
 
             MessageBox.Show($"iValue1 에 있는 현재 값은 : {iValue1} 입니다.");
-           // MessageBox.Show($"iValue2 에 있는 현재 값은 : {iValue2} 입니다.");
+            MessageBox.Show($"iValue2 에 있는 현재 값은 : {iValue2} 입니다.");
 
             //RefMethod(iValue1, iValue2); // 값 을 전달 하는 경우.
             RefMethod(ref iValue1, ref iValue2);

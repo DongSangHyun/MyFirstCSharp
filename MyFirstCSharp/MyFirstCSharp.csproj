@@ -263,6 +263,12 @@
     <Compile Include="Chap24_Method02[메서드02].Designer.cs">
       <DependentUpon>Chap24_Method02[메서드02].cs</DependentUpon>
     </Compile>
+    <Compile Include="Chap25_RecursiveFunction_T[재귀함수].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chap25_RecursiveFunction_T[재귀함수].Designer.cs">
+      <DependentUpon>Chap25_RecursiveFunction_T[재귀함수].cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Chap04_DataType_ConvTest[데이터타입 변환 TEST].resx">
@@ -372,6 +378,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Chap24_Method02[메서드02].resx">
       <DependentUpon>Chap24_Method02[메서드02].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chap25_RecursiveFunction_T[재귀함수].resx">
+      <DependentUpon>Chap25_RecursiveFunction_T[재귀함수].cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
