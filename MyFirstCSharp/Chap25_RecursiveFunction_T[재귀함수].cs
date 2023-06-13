@@ -111,12 +111,32 @@ namespace MyFirstCSharp
 
             // 반복 수행 할 메서드 재귀 메서드 를 호출.
             int iResult = GetFibonacciNum(iTurn); // 피보나치 순번의 값을 확인하기 위한 재귀 메서드 호출.
+            MessageBox.Show($"피보나치 수열 {iTurn} 번쨰의 값은 {iResult} 입니다. 총 반복 횟수 : {iLoopCount}");
         }
 
         // 재귀 메서드 
         int GetFibonacciNum(int _iTurn)
         {
-            return 0;
+            int iResult = 0; // 최 하단의 값을 찾았을떄 누적되는 값. 
+
+            if (_iTurn >= 1 && _iTurn <= 2) // 첫번째 순번. ( 기초값 0)
+            {
+                // 재귀 함수 에서는 이 블록 구문이 핵심적인 부분이 된다. 
+                // 0 , 1 값을 찾아내기 위해 이 블록 코드로 진입할때 까지 재귀 함수가 구동. 
+                // 이곳이 호출 되는 횟수 가 재귀 함수의 총 반복 횟수가 된다.
+                iResult = _iTurn  - 1; // 1번째 기초값 0 
+                                       // 2번째 기초값 1
+                ++iLoopCount; // 반복 횟수 1 증가.
+            }
+            else if (_iTurn > 2)
+            {
+                // 결과 가 누적 될 int 값. iResult
+                // GetFibonacciNum(_iTurn - 2) + GetFibonacciNum(_iTurn - 1) 
+                // 왼쪽 함수 부터 실행.
+                iResult = GetFibonacciNum(_iTurn - 2) + GetFibonacciNum(_iTurn - 1);
+            }
+                
+            return iResult;
         }
 
     }
