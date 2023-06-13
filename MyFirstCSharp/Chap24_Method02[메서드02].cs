@@ -224,7 +224,8 @@ namespace MyFirstCSharp
             // 인자를 배열 형태로 받게 하여 인수를 가변적으로 던져줄수 있는 기능.
 
             GetParameter(100, "안", "녕","하","세","요");
-
+            GetParameter(20,  "안", "녕");
+            GetParameter(20, "안", "녕", "안", "녕", "안", "녕");
         }
 
         void GetParameter(int iValue, params string[] sValues)
