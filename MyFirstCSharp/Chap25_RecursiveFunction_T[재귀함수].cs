@@ -102,7 +102,22 @@ namespace MyFirstCSharp
                . 반복할 노드(횟수) 가 많아 질 수록 효율성이 떨어진다. 
                    - 메모이제이션 기법으로 보완이 가능. (메모화)
              */
-            
+
+            iLoopCount = 0; // 반복 횟수 0 할당.
+
+            // 입력한 순차. iTurn
+            bool bCheck = int.TryParse(txtInput.Text, out int iTurn); // out int iResutl iResult 를 생성 하면서 out  값을 할당 받기.
+            if (!bCheck) return;
+
+            // 반복 수행 할 메서드 재귀 메서드 를 호출.
+            int iResult = GetFibonacciNum(iTurn); // 피보나치 순번의 값을 확인하기 위한 재귀 메서드 호출.
         }
+
+        // 재귀 메서드 
+        int GetFibonacciNum(int _iTurn)
+        {
+            return 0;
+        }
+
     }
 }
