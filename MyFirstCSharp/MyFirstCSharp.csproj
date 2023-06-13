@@ -251,11 +251,17 @@
     <Compile Include="Chap22_Method01_Test_T.Designer.cs">
       <DependentUpon>Chap22_Method01_Test_T.cs</DependentUpon>
     </Compile>
-    <Compile Include="Chap23_TryCatchFinally.cs">
+    <Compile Include="Chap23_TryCatchFinally[예외처리].cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Chap23_TryCatchFinally.Designer.cs">
-      <DependentUpon>Chap23_TryCatchFinally.cs</DependentUpon>
+    <Compile Include="Chap23_TryCatchFinally[예외처리].Designer.cs">
+      <DependentUpon>Chap23_TryCatchFinally[예외처리].cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chap24_Method02[메서드02].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chap24_Method02[메서드02].Designer.cs">
+      <DependentUpon>Chap24_Method02[메서드02].cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -361,8 +367,11 @@
     <EmbeddedResource Include="Chap22_Method01_Test_T.resx">
       <DependentUpon>Chap22_Method01_Test_T.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Chap23_TryCatchFinally.resx">
-      <DependentUpon>Chap23_TryCatchFinally.cs</DependentUpon>
+    <EmbeddedResource Include="Chap23_TryCatchFinally[예외처리].resx">
+      <DependentUpon>Chap23_TryCatchFinally[예외처리].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chap24_Method02[메서드02].resx">
+      <DependentUpon>Chap24_Method02[메서드02].cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
