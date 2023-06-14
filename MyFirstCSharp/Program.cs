@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyFirstCSharp.Lesson05_Class;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace MyFirstCSharp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Chap28_StaticConst_F()); 
+            Application.Run(new Chap30_Class_F()); 
         }
     }
 }

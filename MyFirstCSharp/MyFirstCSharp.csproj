@@ -285,6 +285,12 @@
       <DependentUpon>Chap28_StaticConst_F.cs</DependentUpon>
     </Compile>
     <Compile Include="Lesson05_Class\Chap29_Class[클래스].cs" />
+    <Compile Include="Lesson05_Class\Chap30_Class_F[클래스].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lesson05_Class\Chap30_Class_F[클래스].Designer.cs">
+      <DependentUpon>Chap30_Class_F[클래스].cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Lesson01_Intro\Chap04_DataType_ConvTest[데이터타입 변환 TEST].resx">
@@ -403,6 +409,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Lesson05_Class\Chap28_StaticConst_F.resx">
       <DependentUpon>Chap28_StaticConst_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lesson05_Class\Chap30_Class_F[클래스].resx">
+      <DependentUpon>Chap30_Class_F[클래스].cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
