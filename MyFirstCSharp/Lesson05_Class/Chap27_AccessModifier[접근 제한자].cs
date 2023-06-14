@@ -37,7 +37,7 @@ namespace MyFirstCSharp.Lesson05_Class
         // Protected : 파생 클래스에서 접근이 가능. 
 
         // 클래스의 인스턴스 변수  ( 클래스의 필드 멤버, 전역변수) 
-        public string sPublic = "안녕하asdasd세요";        // 모든 곳에서 접근이 가능한 인스턴스 변수.
+        public string sPublic = "안녕하세요";        // 모든 곳에서 접근이 가능한 인스턴스 변수.
         private string sPrivate = "Private string"; // 해당 클래스에서만 호출이 가능한 인스턴스 변수.
         protected string sPartial = "Partial Class string"; // 분할 클래스 에서만 접근이 가능한 인스턴스 변수
     }
