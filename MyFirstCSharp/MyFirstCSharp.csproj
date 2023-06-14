@@ -284,6 +284,7 @@
     <Compile Include="Lesson05_Class\Chap28_StaticConst_F.Designer.cs">
       <DependentUpon>Chap28_StaticConst_F.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lesson05_Class\Chap29_Class[클래스].cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Lesson01_Intro\Chap04_DataType_ConvTest[데이터타입 변환 TEST].resx">
