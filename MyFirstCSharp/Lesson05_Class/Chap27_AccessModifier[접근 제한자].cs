@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyFirstCSharp.Lesson05_Class
+namespace MyFirstCSharp
 {
     // 접근 제한자. 
     // 프로그램 내에서 특정한 코드, 변수, 필드, 메서드 등  에 접근 하려고 (호출) 할때 

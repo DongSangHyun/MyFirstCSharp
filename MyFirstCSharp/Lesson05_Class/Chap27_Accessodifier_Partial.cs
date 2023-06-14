@@ -5,7 +5,7 @@ using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyFirstCSharp.Lesson05_Class
+namespace MyFirstCSharp
 {
     // Partial Class (분할 클래스 , 파생 클래스)
     // . 클래스는 동일한 NameSpace 에서 같은이름으로 작성될 수 없다. 

@@ -16,7 +16,7 @@ namespace MyFirstCSharp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Chap26_2sComplement()); 
+            Application.Run(new Chap28_StaticConst_F()); 
         }
     }
 }
