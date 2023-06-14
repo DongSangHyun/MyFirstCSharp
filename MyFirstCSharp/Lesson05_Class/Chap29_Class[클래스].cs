@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MyFirstCSharp.Lesson05_Class
+namespace MyFirstCSharp
 {
     /*
        클래스 
@@ -79,9 +79,9 @@ namespace MyFirstCSharp.Lesson05_Class
         // 메서드 멤버   : 클래스를 생성 후 실제구현이 이루어 지는곳 호출하여 프로그램을 실행. 
     }
 
-    class NewClass
+    class _NewClass
     {
-        public NewClass()
+        public _NewClass()
         {
             // Chap29_Class() 생성자 메서드 를 실행 하여 초기화 한 내역을
             // New 키워드가 메모리(Heap)에 등록하고
