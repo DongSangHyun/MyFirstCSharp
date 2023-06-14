@@ -37,8 +37,8 @@ namespace MyFirstCSharp.Lesson05_Class
         // Protected : 파생 클래스에서 접근이 가능. 
 
         // 클래스의 인스턴스 변수  ( 클래스의 필드 멤버, 전역변수) 
-        public    string sPublic  = "안녕하세요";           // 모든 곳에서 접근이 가능한 인스턴스 변수.
-        private   string sPrivate = "Private string";       // 해당 클래스에서만 호출이 가능한 인스턴스 변수.
+        public string sPublic = "안녕하세요";           // 모든 곳에서 접근이 가능한 인스턴스 변수.
+        private string sPrivate = "Private string";       // 해당 클래스에서만 호출이 가능한 인스턴스 변수.
         protected string sPartial = "Partial Class string"; // 분할 클래스 에서만 접근이 가능한 인스턴스 변수
 
         //int iLoopCnnt = 0;
@@ -56,10 +56,9 @@ namespace MyFirstCSharp.Lesson05_Class
         {
             //  다른 클래스에서는 호출 할 수 없는  private 메서드.
             sPrivate = "동일 클래스의 다른 메서드 에서도 접근 가능";
-            sPublic  = "동일 클래스의 다른 메서드 에서도 접근 가능";
+            sPublic = "동일 클래스의 다른 메서드 에서도 접근 가능";
             sPartial = "동일 클래스의 다른 메서드 에서도 접근 가능";
         }
-
     }
 
 
@@ -94,5 +93,11 @@ namespace MyFirstCSharp.Lesson05_Class
             // 최소한 의 소스, 코딩 만 외부에 공개 함으로서 프로그램의 무결성과 안전성을 유지 하도록 하는 방식 
             
         }
-    }  
+    }
+     
+
+    partial class Chap27_Accessodifier_Partial
+    {
+        // 동일한 네임스페이스 에서는 Partial 클래스를 어디서든지 생성 하여 하나로 만들수 있다.
+    }
 }

@@ -275,6 +275,7 @@
     <Compile Include="Lesson04_Method\Chap26_2sComplement[2의 보수법].Designer.cs">
       <DependentUpon>Chap26_2sComplement[2의 보수법].cs</DependentUpon>
     </Compile>
+    <Compile Include="Lesson05_Class\Chap28_StaticConst[정적한정자_상수].cs" />
     <Compile Include="Lesson05_Class\Chap27_AccessModifier[접근 제한자].cs" />
     <Compile Include="Lesson05_Class\Chap27_Accessodifier_Partial.cs" />
     <Compile Include="Program.cs" />
