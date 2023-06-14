@@ -275,6 +275,7 @@
     <Compile Include="Lesson04_Method\Chap26_2sComplement[2의 보수법].Designer.cs">
       <DependentUpon>Chap26_2sComplement[2의 보수법].cs</DependentUpon>
     </Compile>
+    <Compile Include="Lesson05_Class\Chap27_AccessModifier[접근 제한자].cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Lesson01_Intro\Chap04_DataType_ConvTest[데이터타입 변환 TEST].resx">
