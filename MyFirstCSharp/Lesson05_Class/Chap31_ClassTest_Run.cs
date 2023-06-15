@@ -26,7 +26,7 @@ namespace MyFirstCSharp
         public Chap31_ClassTest_Run(Chap31_ClassTest_Main TempClass)
         {
             InitializeComponent();
-            _TempClass = TempClass;
+            _TempClass = TempClass; 
         }
 
         private void btnRun_Click(object sender, EventArgs e)
@@ -43,6 +43,8 @@ namespace MyFirstCSharp
             _TempClass.Tag = "가동중";
             MessageBox.Show("가동 상태를 등록 하였습니다.");
             this.Close(); // 현재 클래스를 종료 (현재 클래를 메모리 에서 소거)
+            this.Tag = true;
+
         }
     }
 }
