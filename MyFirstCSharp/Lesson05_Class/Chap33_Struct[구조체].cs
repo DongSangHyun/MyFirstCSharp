@@ -70,8 +70,7 @@ namespace MyFirstCSharp.Lesson05_Class
 
     public partial class Chap33_Struct : Form
     {
-        // -- 구조체 선언 (클래스와 함께 Heap)
-        
+        // -- 구조체 선언 (클래스와 함께 Heap) 
         public Chap33_Struct()
         {
             InitializeComponent();
@@ -80,7 +79,23 @@ namespace MyFirstCSharp.Lesson05_Class
 
         private void btnStruct_Click(object sender, EventArgs e)
         {
+            // 3개의 생성자 인자를 가지고 있는 구조체 를 Stack 에 등록
+            Color MyColor = new Color("빨강", "노랑","블루");
 
+            // 구조체 값 전달 깊은복사. ( 클래스 같은 경우는 얕은복사)
+            Color MyColor2 = MyColor;
+            MyColor2.Red = "RED";  // 복사 를 받은 구조체 의 red 에 데이터 변경.
+
+            // 원본 구조체 의 Red 의 값.
+            MessageBox.Show(MyColor.Red);
+
+            // 값 형식 이므로 데이터를 참조 전달 하는 방법
+            SetColor(ref MyColor);
+        }
+
+        private void SetColor(ref Color _Color)
+        {
+            _Color.Red = "RED";
         }
     }
 }
