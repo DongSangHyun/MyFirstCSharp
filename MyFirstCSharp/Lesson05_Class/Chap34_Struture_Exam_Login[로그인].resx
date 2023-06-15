@@ -117,4 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label3.Text" xml:space="preserve">
+    <value>선행 학습한 Apply_UserReg 클래스를 이용하여  
+사용자 등록 후 로그인을 한다. 
+ 사용자 ID 와 비밀번호 를 확인 하여 
+
+ 모두 일치 할 경우 " ?? 님 반갑습니다 " 메세지를 표현
+
+ 일치 하지 않을경우 
+  1. ID 가 존재 하지 않을경우  : "존재 하지 않는 ID 를 입력하였습니다"
+  2. ID 는 존재 하나 Password 가 일치하지 않는경우 : 비밀번호 가 잘못되었습니다. 
+를 메세지로 표현하세요</value>
+  </data>
 </root>
