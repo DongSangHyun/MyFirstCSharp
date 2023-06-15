@@ -1,7 +1,7 @@
 ﻿// 사용자 정보 관리를 위한 사용자 정보 데이터 구조체 생성
 using System;
 
-public struct UserInfo
+public struct UserInfo_T
 {
     // 사용자 ID
     public string UserId { get; set; }

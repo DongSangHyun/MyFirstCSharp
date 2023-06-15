@@ -1,7 +1,7 @@
 ﻿
 namespace MyFirstCSharp.Lesson05_Class
 {
-    partial class Chap34_Struture_Apply_UserReg
+    partial class Chap34_Struture_Apply_UserReg_T
     {
         /// <summary>
         /// Required designer variable.
@@ -54,7 +54,7 @@ namespace MyFirstCSharp.Lesson05_Class
             // txtUserID
             // 
             this.txtUserID.Location = new System.Drawing.Point(106, 9);
-            this.txtUserID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUserID.Margin = new System.Windows.Forms.Padding(4);
             this.txtUserID.Name = "txtUserID";
             this.txtUserID.Size = new System.Drawing.Size(263, 28);
             this.txtUserID.TabIndex = 1;
@@ -62,7 +62,7 @@ namespace MyFirstCSharp.Lesson05_Class
             // txtUserName
             // 
             this.txtUserName.Location = new System.Drawing.Point(106, 50);
-            this.txtUserName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(4);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(263, 28);
             this.txtUserName.TabIndex = 3;
@@ -80,8 +80,9 @@ namespace MyFirstCSharp.Lesson05_Class
             // txtPW
             // 
             this.txtPW.Location = new System.Drawing.Point(106, 90);
-            this.txtPW.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPW.Margin = new System.Windows.Forms.Padding(4);
             this.txtPW.Name = "txtPW";
+            this.txtPW.PasswordChar = '*';
             this.txtPW.Size = new System.Drawing.Size(263, 28);
             this.txtPW.TabIndex = 5;
             // 
@@ -98,7 +99,7 @@ namespace MyFirstCSharp.Lesson05_Class
             // txtUserMail
             // 
             this.txtUserMail.Location = new System.Drawing.Point(106, 130);
-            this.txtUserMail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUserMail.Margin = new System.Windows.Forms.Padding(4);
             this.txtUserMail.Name = "txtUserMail";
             this.txtUserMail.Size = new System.Drawing.Size(263, 28);
             this.txtUserMail.TabIndex = 7;
@@ -116,7 +117,7 @@ namespace MyFirstCSharp.Lesson05_Class
             // btnUserReg
             // 
             this.btnUserReg.Location = new System.Drawing.Point(63, 166);
-            this.btnUserReg.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUserReg.Margin = new System.Windows.Forms.Padding(4);
             this.btnUserReg.Name = "btnUserReg";
             this.btnUserReg.Size = new System.Drawing.Size(143, 59);
             this.btnUserReg.TabIndex = 8;
@@ -127,14 +128,14 @@ namespace MyFirstCSharp.Lesson05_Class
             // btnClose
             // 
             this.btnClose.Location = new System.Drawing.Point(214, 166);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(155, 59);
             this.btnClose.TabIndex = 9;
             this.btnClose.Text = "닫기";
             this.btnClose.UseVisualStyleBackColor = true;
             // 
-            // Chap34_Struture_Apply_UserReg
+            // Chap34_Struture_Apply_UserReg_T
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -149,10 +150,10 @@ namespace MyFirstCSharp.Lesson05_Class
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtUserID);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "Chap34_Struture_Apply_UserReg";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "Chap34_Struture_Apply_UserReg_T";
             this.Text = "사용자 등록";
-            this.Load += new System.EventHandler(this.Chap34_Struture_Apply_UserReg_Load);
+            this.Load += new System.EventHandler(this.Chap34_Struture_Apply_UserReg_T_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
