@@ -39,6 +39,7 @@
             this.btnRun.TabIndex = 0;
             this.btnRun.Text = "가동 등록";
             this.btnRun.UseVisualStyleBackColor = true;
+            this.btnRun.Click += new System.EventHandler(this.btnRun_Click);
             // 
             // Chap31_ClassTest_Run
             // 

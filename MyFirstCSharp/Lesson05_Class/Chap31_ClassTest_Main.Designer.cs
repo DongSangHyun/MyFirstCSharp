@@ -45,7 +45,7 @@
             // 
             // btnRunCall
             // 
-            this.btnRunCall.Location = new System.Drawing.Point(300, 35);
+            this.btnRunCall.Location = new System.Drawing.Point(260, 35);
             this.btnRunCall.Name = "btnRunCall";
             this.btnRunCall.Size = new System.Drawing.Size(208, 133);
             this.btnRunCall.TabIndex = 1;
@@ -55,7 +55,7 @@
             // 
             // btnStopCall
             // 
-            this.btnStopCall.Location = new System.Drawing.Point(300, 174);
+            this.btnStopCall.Location = new System.Drawing.Point(260, 174);
             this.btnStopCall.Name = "btnStopCall";
             this.btnStopCall.Size = new System.Drawing.Size(208, 133);
             this.btnStopCall.TabIndex = 2;

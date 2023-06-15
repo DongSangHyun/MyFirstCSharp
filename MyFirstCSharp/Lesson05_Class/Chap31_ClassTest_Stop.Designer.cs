@@ -39,6 +39,7 @@
             this.btnStop.TabIndex = 0;
             this.btnStop.Text = "비가동 등록";
             this.btnStop.UseVisualStyleBackColor = true;
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
             // Chap31_ClassTest_Stop
             // 
