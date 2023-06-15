@@ -133,5 +133,36 @@ namespace MyFirstCSharp.Lesson05_Class
             }
         }
     
+
+        // 12. 일반적인 Get / Set 방법 외에도  프로퍼티를 생성 할 수 있는 방법
+        // 아래와 같이 간단히 표현 할 수 있다
+        public int BookCount3 { get; set; }
+        //private int BookCount3;
+        //public int BookCout3
+        //{
+        //    get
+        //    {
+        //        return BookCount3;
+        //    }
+        //    set
+        //    {
+        //        BookCount3 = value;
+        //    } 
+        //}
+
+
+        // 13. 읽기 전용 프로퍼티
+        public int BooCount4 { get; }// Readonly 
+
+        //  14. 쓰기 전용 프로퍼티
+        public int BooCount5 
+        { 
+            set
+            {
+                iBookCount = value;
+            }
+        }
+
+
     }
 }
