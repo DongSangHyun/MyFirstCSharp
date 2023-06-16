@@ -44,7 +44,7 @@
             // 
             // btnRandom
             // 
-            this.btnRandom.Location = new System.Drawing.Point(278, 40);
+            this.btnRandom.Location = new System.Drawing.Point(292, 40);
             this.btnRandom.Name = "btnRandom";
             this.btnRandom.Size = new System.Drawing.Size(459, 93);
             this.btnRandom.TabIndex = 1;
