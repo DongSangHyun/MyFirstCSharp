@@ -73,6 +73,9 @@ namespace MyFirstCSharp
             toolBar.DoSave();
             //toolBar.DoPrint();
         }
+
+        // 업 캐스팅을 왜 ? 쓰는 걸까 ? 
+        // 
         #endregion
     }
 
