@@ -1,4 +1,4 @@
-﻿namespace MyFirstCSharp.Lesson05_Class
+﻿namespace MyFirstCSharp
 {
     partial class Chap35_Inheritance
     {

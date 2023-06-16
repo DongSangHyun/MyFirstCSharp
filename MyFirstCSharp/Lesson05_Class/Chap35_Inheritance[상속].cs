@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 
-namespace MyFirstCSharp.Lesson05_Class
+namespace MyFirstCSharp
 {
 
     /*

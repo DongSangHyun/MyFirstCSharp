@@ -56,6 +56,14 @@ namespace MyFirstCSharp
         #region < 2. 상속한 클래스의 기능 실행. 및 업 캐스팅 > 
         private void btnAbstract_Click(object sender, EventArgs e)
         {
+            ItemMaster itemr = new ItemMaster();
+            // ItemMaster() 생성자에있는 기능을 실행하고 (초기화)
+            // new   :  그 결과를 Heap 메모리에 등록 을해라. 
+            // itemr : Stack 에 itemr 이라는 이름으로 등록 하고
+            // =     : new 로 생성한 Heap 에 있는 메모리 주소를 itemr 에 전달하라. 
+            
+            
+            
             // 추상 클래스 는 인스턴스화 할 수 없다(기능 정의 와 상속이 목적)
             //ToolBar toolBar = new ToolBar();
 
@@ -71,14 +79,102 @@ namespace MyFirstCSharp
             ToolBar toolBar = new ItemMaster(); // 업캐스팅
             toolBar.DoSearch();
             toolBar.DoSave();
-            //toolBar.DoPrint();
+            //toolBar.DoPrint(); 
         }
 
         // 업 캐스팅을 왜 ? 쓰는 걸까 ? 
-        // 
+        // ?? 
         #endregion
-    }
 
+        #region < 4. 업 캐스팅을 통한 추상메서드 기능 호출.>
+
+
+
+
+        // 아래 3개의 메서드 는 불필요한 로직이 반복 되어 
+        // 메서드 하나로 줄인다.
+        //private void btnUserSearch_Click(object sender, EventArgs e)
+        //{
+        //    // 사용자 정보 조회 기능 
+        //    UserMaster UM = new UserMaster();
+        //    UM.DoSearch(); // 사용자 정보 조회 기능 실행
+        //}
+
+        //private void btnCustSearch_Click(object sender, EventArgs e)
+        //{
+        //    CustMaster CM  = new CustMaster();
+        //    CM.DoSearch(); // 고객 정보 조회 기능 실행
+        //}
+
+        //private void btnItemSearch_Click(object sender, EventArgs e)
+        //{
+        //    ItemMaster IM = new ItemMaster();
+        //    IM.DoSearch(); // 품목 정보 조회 기능 실행.
+        //}
+
+        // 리펙토링 : 프로그램 구현에 영향을 주지 않고 간결 하고 효율적인 코드로 꾸미는 작업.
+        // 코드 리펙토링 1 번째 단계 
+        //private void MenuSearch(object sender, EventArgs e)
+        //{
+        //    Button button = (Button)sender;
+        //    if (button.Name == "btnUserSearch")
+        //    {
+        //        // 사용자 정보 조회 기능 
+        //        UserMaster UM = new UserMaster();
+        //        UM.DoSearch(); // 사용자 정보 조회 기능 실행
+        //    }
+
+        //    if (button.Name == "btnCustSearch")
+        //    {
+        //        // 고객 정보 조회 기능
+        //        CustMaster CM = new CustMaster();
+        //        CM.DoSearch(); // 고객 정보 조회 기능 실행
+        //    }
+
+        //    if (button.Name == "btnItemSearch")
+        //    {
+
+        //        // 품목 정보 조회 기능
+        //        ItemMaster IM = new ItemMaster();
+        //        IM.DoSearch(); // 품목 정보 조회 기능 실행.
+        //    }
+        //}
+
+        // 코드 리펙터링 2 번째 단계 
+        // 버튼에 Tag 를 두어 클래스를 가변적으로 생성. 
+        private void MenuSearch(object sender, EventArgs e)
+        {
+            // 1. 버튼의 객체를 생성.
+            Button button = (Button)sender;
+            // 2. 찾으려는 클래스의 네임스페이스와 이름.
+
+            
+
+            if (button.Name == "btnUserSearch")
+            {
+                // 사용자 정보 조회 기능 
+                UserMaster UM = new UserMaster();
+                UM.DoSearch(); // 사용자 정보 조회 기능 실행
+            }
+
+            if (button.Name == "btnCustSearch")
+            {
+                // 고객 정보 조회 기능
+                CustMaster CM = new CustMaster();
+                CM.DoSearch(); // 고객 정보 조회 기능 실행
+            }
+
+            if (button.Name == "btnItemSearch")
+            {
+
+                // 품목 정보 조회 기능
+                ItemMaster IM = new ItemMaster();
+                IM.DoSearch(); // 품목 정보 조회 기능 실행.
+            }
+        }
+        #endregion
+
+    }
     #region < 1. 추상 클래스 의 생성 및 상속 > 
     // 모든 화면에서 구현해야 하는 기능 
     public abstract class ToolBar  // 멤버 중 하나라도 abstract 가 부여(추상화) 되어있을경우 클래스도 abstract(추상화) 를 설정해야한다.
@@ -115,7 +211,34 @@ namespace MyFirstCSharp
             MessageBox.Show("품목 화면을 출력합니다.");
         }
     }
-    
+    #endregion
+
+    #region < 3. 추상 클래스를 상속 받는 추가 (클래스)화면 들 >
+    class UserMaster : ToolBar
+    { 
+        public override void DoSave()
+        {
+            MessageBox.Show("사용자 정보를 저장합니다.");
+        }
+
+        public override void DoSearch()
+        {
+            MessageBox.Show("사용자 정보를 조회합니다."); 
+        }
+    }
+
+    class CustMaster : ToolBar
+    {
+        public override void DoSave()
+        {
+            MessageBox.Show("고객 정보를 저장합니다.");
+        }
+
+        public override void DoSearch()
+        {
+            MessageBox.Show("고객 정보를 조회합니다.");
+        }
+    }
     #endregion
 
 }
