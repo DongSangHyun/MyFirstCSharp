@@ -346,6 +346,7 @@
     <Compile Include="Lesson05_Class\Chap35_Inheritance[상속].Designer.cs">
       <DependentUpon>Chap35_Inheritance[상속].cs</DependentUpon>
     </Compile>
+    <Compile Include="Lesson05_Class\Chap37_IntterFace.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Lesson05_Class\Chap36_abstract_Polymorphism[추상화와 다형성].resx">
