@@ -140,8 +140,54 @@ namespace MyFirstCSharp
         //    }
         //}
 
+
         // 코드 리펙터링 2 번째 단계 
         // 버튼에 Tag 를 두어 클래스를 가변적으로 생성. 
+        //private void MenuSearch(object sender, EventArgs e)
+        //{
+        //    // 1. 버튼의 객체를 생성.
+        //    Button button = (Button)sender;
+        //    // 2. 찾으려는 클래스의 네임스페이스와 이름.
+        //    string sClassName = $"MyFirstCSharp.{button.Tag}";
+        //    // 3. 문자열로 클래스를 찾기. 
+        //    Type type = Type.GetType(sClassName);
+        //    // 4. 해당 클래스 를 인스턴스 화 하기. 
+        //    object instence = Activator.CreateInstance(type);
+
+        //    // 품목, 사용자, 고객 클래스 3개중에 하나
+        //    // is : instecnce 객체가 itemmaster 클래스로 변환될수 있다면 (true/false)
+        //    // if(instence is ItemMaster) 
+
+        //    // as : instence 객체 가 Itemmaster 클래스로 변환 될수 있다면
+        //    // 변환하고(ItemMaster IM Stack 메모리에 주소 를 전달하라)
+        //    // 안되다면 null을 반환하라
+        //    ItemMaster IM =  instence as ItemMaster; 
+        //    if (IM != null)
+        //    {
+        //        IM.DoSearch(); // 품목마스터 클래스의 조회 기능을 실행.
+        //    }
+
+        //    CustMaster CM = instence as CustMaster;
+        //    if (CM != null)
+        //    {
+        //        CM.DoSearch(); // 고객 마스터 클래스의 조회 기능을 실행.
+        //    }
+
+        //    UserMaster UM = instence as UserMaster;
+        //    if (UM != null)
+        //    {
+        //        UM.DoSearch(); // 사용자 마스터 클래스의 조회 기능을 실행.
+        //    }
+        //    // 해당 클래스에 있는 기능을 호출 하기 위해서는 
+        //    // 해당 클래스 의 객체를 선언 해야 한다. 
+        //    // 만약 100 개의 화면이 있을경우 100개의 로직을 구현해 내야 한다.
+        //    // 코드가 간결해지지 못하고 확장성 과 유지보수성이 떨어진다.
+        //}
+
+
+
+        // 코드 리펙터링 3 번째 단계 
+        // 다형성을 통한 추상클래스 를 상속 받는 클래스 를 업캐스팅 (패턴).
         private void MenuSearch(object sender, EventArgs e)
         {
             // 1. 버튼의 객체를 생성.
@@ -151,31 +197,35 @@ namespace MyFirstCSharp
             // 3. 문자열로 클래스를 찾기. 
             Type type = Type.GetType(sClassName);
             // 4. 해당 클래스 를 인스턴스 화 하기. 
-            object instence = Activator.CreateInstance(type);   
+            object instence = Activator.CreateInstance(type);
 
-
-
-            if (button.Name == "btnUserSearch")
+            // 다형성 을 구현하기 위한 기능 UPCasting
+            // UPCasting 을 통한 다형성 등장. 
+            // UPCasting : 부모 클래스 로 부터 구현을 정의 받은 기능을 
+            //             자식클래스에서 구현하고 자식클래스가 부모 클래스로 형변환 되면서
+            //             자식클래스의 기능을 부모 클래스의 객체 가 구현 할 수 있도록 하는 기능. 
+            ToolBar TempMenu = instence  as ToolBar;
+            if (TempMenu != null)
             {
-                // 사용자 정보 조회 기능 
-                UserMaster UM = new UserMaster();
-                UM.DoSearch(); // 사용자 정보 조회 기능 실행
+                TempMenu.DoSearch();
             }
 
-            if (button.Name == "btnCustSearch")
-            {
-                // 고객 정보 조회 기능
-                CustMaster CM = new CustMaster();
-                CM.DoSearch(); // 고객 정보 조회 기능 실행
-            }
+            // 다형성 => UPCasting 기능을 통하여 구현.
+            //- 어떤 객체의 속성이나 기능이 상황에 따라 여러 가지 형태를 가질 수 있는 성질
+            //- 추상 클래스를 상속 받은 자식 클래스들이 부모의 클래스 로 업캐스팅 되어
+            //  부모 클래스 형태로
+            //  자식 클래스에서 구현한 부모 클래스의 기능을 동작 하도록 제어 하는 방법
+            //  자식 클래스들의 기능 구현해야 할때 자식 객체를 N 개 객체화 할 필요가 없게 되므로
+            //  코딩을 간결하게 표현 할 수 있다.
 
-            if (button.Name == "btnItemSearch")
-            {
 
-                // 품목 정보 조회 기능
-                ItemMaster IM = new ItemMaster();
-                IM.DoSearch(); // 품목 정보 조회 기능 실행.
-            }
+            // 추상 클래스 의 상속 과 다형성(업 캐스팅) 의 패턴. 
+            // 추상클래스를 상속 받은 자식 클래스의 수가 많을때 에도 
+            // 부모 클래스의 기능을 상속 받아 구현한 자식 클래스의 기능을 부모 클래스의 객체로 호출 할 수 있으므로
+            // 코드가 간결해 지고
+            // 확장성(자식 클래스가 N 개라도 다형성 코드를 수정 할 필요가 없다) 및
+            // 유지 보수성(메서드 명칭을 변경 시 다형성 코드 만 수정 하면 됨) 이 확대 된다.
+
         }
         #endregion
 
@@ -241,7 +291,62 @@ namespace MyFirstCSharp
 
         public override void DoSearch()
         {
-            MessageBox.Show("고객 정보를 조회합니다.");
+            MessageBox.Show("고객 정보1를 조회합니다.");
+        }
+    }
+
+
+    class CustMaster2 : ToolBar
+    {
+        public override void DoSave()
+        {
+            MessageBox.Show("고객 정보를 저장합니다.");
+        }
+
+        public override void DoSearch()
+        {
+            MessageBox.Show("고객 정보2를 조회합니다.");
+        }
+    }
+
+
+    class CustMaster3 : ToolBar
+    {
+        public override void DoSave()
+        {
+            MessageBox.Show("고객 정보를 저장합니다.");
+        }
+
+        public override void DoSearch()
+        {
+            MessageBox.Show("고객 정보3를 조회합니다.");
+        }
+    }
+
+
+    class CustMaster5 : ToolBar
+    {
+        public override void DoSave()
+        {
+            MessageBox.Show("고객 정보를 저장합니다.");
+        }
+
+        public override void DoSearch()
+        {
+            MessageBox.Show("고객 정보4를 조회합니다.");
+        }
+    }
+
+    class CustMaster4 : ToolBar
+    {
+        public override void DoSave()
+        {
+            MessageBox.Show("고객 정보5를 저장합니다.");
+        }
+
+        public override void DoSearch()
+        {
+            MessageBox.Show("고객 정보5를 조회합니다.");
         }
     }
     #endregion
