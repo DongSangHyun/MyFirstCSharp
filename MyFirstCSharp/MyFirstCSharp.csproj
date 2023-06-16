@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Lesson05_Class\Chap36_abstract_Polymorphism[추상화와 다형성].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lesson05_Class\Chap36_abstract_Polymorphism[추상화와 다형성].Designer.cs">
+      <DependentUpon>Chap36_abstract_Polymorphism[추상화와 다형성].cs</DependentUpon>
+    </Compile>
     <Compile Include="Lesson01_Intro\Chap04_DataType_ConvTest[데이터타입 변환 TEST].cs">
       <SubType>Form</SubType>
     </Compile>
@@ -342,6 +348,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Lesson05_Class\Chap36_abstract_Polymorphism[추상화와 다형성].resx">
+      <DependentUpon>Chap36_abstract_Polymorphism[추상화와 다형성].cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Lesson01_Intro\Chap04_DataType_ConvTest[데이터타입 변환 TEST].resx">
       <DependentUpon>Chap04_DataType_ConvTest[데이터타입 변환 TEST].cs</DependentUpon>
     </EmbeddedResource>

@@ -14,7 +14,7 @@ namespace MyFirstCSharp.Lesson05_Class
     public partial class Chap34_Struture_Exam_Login_T : Form
     {
         // 사용자 등록 화면에서 사용자의 리스트를 받아올 리스트
-        private List<UserInfo_T> userinfos = new List<UserInfo_T>();
+        private List<UserInfo> userinfos = new List<UserInfo>();
 
         public Chap34_Struture_Exam_Login_T()
         {
@@ -37,7 +37,7 @@ namespace MyFirstCSharp.Lesson05_Class
             // 리스트에 등록 되어 있는 사용자 정보 와 
             // 입력한 사용자의 정보가 같은 지 확인
 
-            foreach (UserInfo_T userinfo in userinfos)
+            foreach (UserInfo userinfo in userinfos)
             {
                 if (userinfo.UserId == sUserId)
                 {

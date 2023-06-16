@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.btnInheritance = new System.Windows.Forms.Button();
+            this.btnRandom = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnInheritance
@@ -41,11 +42,22 @@
             this.btnInheritance.UseVisualStyleBackColor = true;
             this.btnInheritance.Click += new System.EventHandler(this.btnInheritance_Click);
             // 
+            // btnRandom
+            // 
+            this.btnRandom.Location = new System.Drawing.Point(278, 40);
+            this.btnRandom.Name = "btnRandom";
+            this.btnRandom.Size = new System.Drawing.Size(459, 93);
+            this.btnRandom.TabIndex = 1;
+            this.btnRandom.Text = "기존 클래스 를 상속 받아 새로운 기능 추가하기";
+            this.btnRandom.UseVisualStyleBackColor = true;
+            this.btnRandom.Click += new System.EventHandler(this.btnRandom_Click);
+            // 
             // Chap35_Inheritance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(547, 187);
+            this.ClientSize = new System.Drawing.Size(789, 171);
+            this.Controls.Add(this.btnRandom);
             this.Controls.Add(this.btnInheritance);
             this.Name = "Chap35_Inheritance";
             this.Text = "상속";
@@ -56,5 +68,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnInheritance;
+        private System.Windows.Forms.Button btnRandom;
     }
 }

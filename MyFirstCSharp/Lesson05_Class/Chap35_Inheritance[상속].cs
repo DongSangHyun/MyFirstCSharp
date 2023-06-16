@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace MyFirstCSharp.Lesson05_Class
 {
@@ -60,18 +61,61 @@ namespace MyFirstCSharp.Lesson05_Class
             public void ChildMethod()
             {
                 MessageBox.Show("자식 클래스의 메서드 를 호출 하였습니다.");
-            }
-
-
-
-
+            } 
         }
-        #endregion
-
 
         private void btnInheritance_Click(object sender, EventArgs e)
         {
+            // 상속한 결과를 확인
+            Child child = new Child();
+            MessageBox.Show(child.sParents); // 부모클래스의 필드멤버 호출. 
+            child.sParents = "부모전역 변수 값의 변경이 가능합니다.";
+            MessageBox.Show(child.sChild);
 
+            child.ParentsMethod(); // 부모클래스의 메서드 멤버를 호출가능.
         }
+
+
+        #endregion
+
+
+        #region < 랜덤 클래스의 상속 > 
+        class MyRandom : Random
+        {
+            // random 클래스를 상속 
+            public int ReturnRandom()
+            {
+                // base (부모 클래스 를 지칭)   Random
+                // this (자신의 클래스를 지칭)  MyRandom
+                return base.Next(0, 11); 
+            }
+        }
+
+        private void btnRandom_Click(object sender, EventArgs e)
+        {
+            MyRandom myrandom = new MyRandom();
+            myrandom.ReturnRandom(); // 랜덤 클래스를 상속 받은 MyRandom 에 있는 메서드 호출.
+            myrandom.Next(0, 200); // 부모 클래스에 있는 기능을 그대로 사용 가능.
+        }
+
+
+        // 상속을 하지 못하도록 하는 키워드 seald
+        // 상속에 대한 접근을 제한.
+
+        sealed class Parents2
+        {
+            // 상속을 할 수 없게 만든 클래스.
+             
+        }
+        //class Mystring : string
+        //{
+
+        //}
+
+        //class Child2 : Parents2
+        //{
+        //    // sealed 형식의 클래스는 상속 받을 수 없다.
+        //}
+        #endregion
     }
 }

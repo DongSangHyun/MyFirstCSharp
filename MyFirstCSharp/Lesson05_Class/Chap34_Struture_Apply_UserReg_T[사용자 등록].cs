@@ -53,7 +53,7 @@ namespace MyFirstCSharp.Lesson05_Class
             //userinfos.Add(userinfo); 
 
             // 위 로직은 아래와 같이 표현 할 수 있다. 
-            userinfos_reg.Add(new UserInfo_T
+            userinfos_reg.Add(new UserInfo
             {   UserId      = sUserid,
                 Password    = sPassWord,
                 UserName    = sUserName,
