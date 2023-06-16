@@ -28,12 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.btnInheritance = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // btnInheritance
+            // 
+            this.btnInheritance.Location = new System.Drawing.Point(51, 40);
+            this.btnInheritance.Name = "btnInheritance";
+            this.btnInheritance.Size = new System.Drawing.Size(212, 93);
+            this.btnInheritance.TabIndex = 0;
+            this.btnInheritance.Text = "상속";
+            this.btnInheritance.UseVisualStyleBackColor = true;
+            this.btnInheritance.Click += new System.EventHandler(this.btnInheritance_Click);
+            // 
+            // Chap35_Inheritance
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Chap35_Inheritance";
+            this.ClientSize = new System.Drawing.Size(547, 187);
+            this.Controls.Add(this.btnInheritance);
+            this.Name = "Chap35_Inheritance";
+            this.Text = "상속";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnInheritance;
     }
 }
