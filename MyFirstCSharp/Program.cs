@@ -18,7 +18,7 @@ namespace MyFirstCSharp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Chap35_Inheritance()); 
+            Application.Run(new Chap36_abstract_Polymorphism()); 
         }
     }
 }

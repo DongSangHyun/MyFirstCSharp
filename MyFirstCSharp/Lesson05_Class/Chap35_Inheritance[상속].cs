@@ -78,7 +78,6 @@ namespace MyFirstCSharp.Lesson05_Class
 
         #endregion
 
-
         #region < 랜덤 클래스의 상속 > 
         class MyRandom : Random
         {
