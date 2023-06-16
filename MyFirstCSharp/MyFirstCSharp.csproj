@@ -334,6 +334,12 @@
     <Compile Include="Lesson05_Class\Chap34_Struture_Exam_Login_T[로그인].Designer.cs">
       <DependentUpon>Chap34_Struture_Exam_Login_T[로그인].cs</DependentUpon>
     </Compile>
+    <Compile Include="Lesson05_Class\Chap35_Inheritance[상속].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lesson05_Class\Chap35_Inheritance[상속].Designer.cs">
+      <DependentUpon>Chap35_Inheritance[상속].cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Lesson01_Intro\Chap04_DataType_ConvTest[데이터타입 변환 TEST].resx">
@@ -476,6 +482,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Lesson05_Class\Chap34_Struture_Exam_Login_T[로그인].resx">
       <DependentUpon>Chap34_Struture_Exam_Login_T[로그인].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lesson05_Class\Chap35_Inheritance[상속].resx">
+      <DependentUpon>Chap35_Inheritance[상속].cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

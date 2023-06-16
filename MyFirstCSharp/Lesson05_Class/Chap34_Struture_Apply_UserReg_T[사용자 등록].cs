@@ -13,9 +13,9 @@ namespace MyFirstCSharp.Lesson05_Class
     public partial class Chap34_Struture_Apply_UserReg_T : Form
     {
         // 클래스의 전역 변수 로 사용자 정보 데이터 유형을 나열할 수 있는 List
-        private List<UserInfo_T> userinfos_reg = new List<UserInfo_T>();
+        private List<UserInfo> userinfos_reg = new List<UserInfo>();
 
-        public Chap34_Struture_Apply_UserReg_T(List<UserInfo_T> TempList)
+        public Chap34_Struture_Apply_UserReg_T(List<UserInfo> TempList)
         {
             InitializeComponent();
             userinfos_reg = TempList;
