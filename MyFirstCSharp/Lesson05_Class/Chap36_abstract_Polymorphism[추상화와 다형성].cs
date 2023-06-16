@@ -147,8 +147,13 @@ namespace MyFirstCSharp
             // 1. 버튼의 객체를 생성.
             Button button = (Button)sender;
             // 2. 찾으려는 클래스의 네임스페이스와 이름.
+            string sClassName = $"MyFirstCSharp.{button.Tag}";
+            // 3. 문자열로 클래스를 찾기. 
+            Type type = Type.GetType(sClassName);
+            // 4. 해당 클래스 를 인스턴스 화 하기. 
+            object instence = Activator.CreateInstance(type);   
 
-            
+
 
             if (button.Name == "btnUserSearch")
             {
